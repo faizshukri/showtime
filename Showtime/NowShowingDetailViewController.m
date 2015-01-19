@@ -18,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _movie = [APIHelper getMovieInfoById:_movie.movieId];
+    
     [_thumb setImage:_movie.thumbnail];
     [_titleLabel setText:_movie.title];
     

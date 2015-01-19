@@ -7,7 +7,6 @@
 //
 
 #import "APIHelper.h"
-#import "Movie.h"
 
 @implementation APIHelper
 
@@ -57,8 +56,7 @@
     NSDictionary *result = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
     
     // Return movies array object
-    NSDictionary *data = [result objectForKey:@"movies"];
-    return [[Movie alloc] initWithData:data];
+    return [[Movie alloc] initWithData:result];
 }
 
 +(UIImage*)getThumbWithURL:(NSString *)url{

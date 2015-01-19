@@ -15,8 +15,7 @@
     self = [super init];
     
     if(self){
-        _movieId   = (int)[data objectForKey:@"id"];
-        _title     = [data objectForKey:@"title"];
+        _movieId   = [[data objectForKey:@"id"] intValue];
         _title     = [data objectForKey:@"title"];
         _synopsis  = [data objectForKey:@"synopsis"];
         _thumbnail = [APIHelper getThumbWithURL:[[data objectForKey:@"posters"] objectForKey:@"thumbnail"]];
