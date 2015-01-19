@@ -11,6 +11,7 @@
 		C31E1E611A6D9FAA00C7AB04 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E601A6D9FAA00C7AB04 /* Movie.m */; };
 		C31E1E641A6DA01F00C7AB04 /* Thumb.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E631A6DA01F00C7AB04 /* Thumb.m */; };
 		C31E1E671A6DA7B300C7AB04 /* NowShowingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E661A6DA7B300C7AB04 /* NowShowingDetailViewController.m */; };
+		C31E1E6A1A6DB3FB00C7AB04 /* APIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E691A6DB3FB00C7AB04 /* APIHelper.m */; };
 		C345818C1A55D66C001419B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C345818B1A55D66C001419B6 /* main.m */; };
 		C345818F1A55D66C001419B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C345818E1A55D66C001419B6 /* AppDelegate.m */; };
 		C34581981A55D66C001419B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34581961A55D66C001419B6 /* Main.storyboard */; };
@@ -40,6 +41,8 @@
 		C31E1E631A6DA01F00C7AB04 /* Thumb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thumb.m; sourceTree = "<group>"; };
 		C31E1E651A6DA7B300C7AB04 /* NowShowingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowShowingDetailViewController.h; sourceTree = "<group>"; };
 		C31E1E661A6DA7B300C7AB04 /* NowShowingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowShowingDetailViewController.m; sourceTree = "<group>"; };
+		C31E1E681A6DB3FB00C7AB04 /* APIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHelper.h; sourceTree = "<group>"; };
+		C31E1E691A6DB3FB00C7AB04 /* APIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHelper.m; sourceTree = "<group>"; };
 		C34581861A55D66C001419B6 /* Showtime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Showtime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C345818A1A55D66C001419B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C345818B1A55D66C001419B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,11 +99,14 @@
 		C34581881A55D66C001419B6 /* Showtime */ = {
 			isa = PBXGroup;
 			children = (
+				C34581961A55D66C001419B6 /* Main.storyboard */,
+				C345819B1A55D66C001419B6 /* LaunchScreen.xib */,
+				C31E1E681A6DB3FB00C7AB04 /* APIHelper.h */,
+				C31E1E691A6DB3FB00C7AB04 /* APIHelper.m */,
 				C345818D1A55D66C001419B6 /* AppDelegate.h */,
 				C345818E1A55D66C001419B6 /* AppDelegate.m */,
 				C3C0E9D71A5E8FCE006EB147 /* MainViewController.h */,
 				C3C0E9D81A5E8FCE006EB147 /* MainViewController.m */,
-				C34581961A55D66C001419B6 /* Main.storyboard */,
 				C363428A1A6AC01600040B09 /* NowShowingCollectionViewController.h */,
 				C363428B1A6AC01600040B09 /* NowShowingCollectionViewController.m */,
 				C31E1E651A6DA7B300C7AB04 /* NowShowingDetailViewController.h */,
@@ -112,7 +118,6 @@
 				C31E1E621A6DA01F00C7AB04 /* Thumb.h */,
 				C31E1E631A6DA01F00C7AB04 /* Thumb.m */,
 				C34581991A55D66C001419B6 /* Images.xcassets */,
-				C345819B1A55D66C001419B6 /* LaunchScreen.xib */,
 				C34581891A55D66C001419B6 /* Supporting Files */,
 			);
 			path = Showtime;
@@ -251,6 +256,7 @@
 				C31E1E5E1A6D9F6400C7AB04 /* Movies.m in Sources */,
 				C31E1E641A6DA01F00C7AB04 /* Thumb.m in Sources */,
 				C3C0E9D91A5E8FCE006EB147 /* MainViewController.m in Sources */,
+				C31E1E6A1A6DB3FB00C7AB04 /* APIHelper.m in Sources */,
 				C345818C1A55D66C001419B6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
