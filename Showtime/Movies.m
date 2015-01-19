@@ -9,6 +9,7 @@
 #import "Movies.h"
 #import "Movie.h"
 #import "Thumb.h"
+#import "APIHelper.h"
 
 @implementation Movies
 
@@ -17,17 +18,7 @@
     self = [super init];
     
     if(self){
-        NSString *urlString = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=%@&page_limit=%d&page=%d&country=us", @"3hygztm99p9ermrfa2gp8dan", limit, page];
-        
-        NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
-        if(jsonData==nil){
-            NSLog(@"No data returned");
-        }
-        
-        NSError *error;
-        NSDictionary *result = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
-        
-        _movies = (NSArray*)[result objectForKey:@"movies"];
+        _movies = [APIHelper getShowingMoviesWithLimit:limit atPage:page filterLocation:nil];
     }
     
     return self;
