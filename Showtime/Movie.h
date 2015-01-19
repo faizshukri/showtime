@@ -11,8 +11,14 @@
 
 @interface Movie : NSObject
 
+@property int movieId;
 @property NSString *title;
 @property UIImage *thumbnail;
 @property NSString *synopsis;
+@property NSArray *genres;
+@property NSString *mpaa_rating;
+@property NSString *ratings;
+
+-(id) initWithData:(NSDictionary*)data;
 
 @end

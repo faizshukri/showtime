@@ -31,7 +31,6 @@ static NSString * const reuseIdentifier = @"Cell";
     self.navigationController.navigationBar.translucent = NO;
     Movies *mv = [[Movies alloc] initWithLimit:15 andPage:1];
     _movies = [mv getMovies];
-    _thumbArray = [mv getThumbArray];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,14 +66,15 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 #warning Incomplete method implementation -- Return the number of items in the section
-    return _thumbArray.count;
+    return _movies.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ThumbCell" forIndexPath:indexPath];
     
     // Configure the cell
-    UIImageView *imgView = [[UIImageView alloc] initWithImage:[_thumbArray objectAtIndex:[indexPath row]]];
+    Movie *movie = [_movies objectAtIndex:[indexPath row]];
+    UIImageView *imgView = [[UIImageView alloc] initWithImage:movie.thumbnail];
     [cell setBackgroundView:imgView];
     
     return cell;

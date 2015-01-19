@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface NowShowingCollectionViewController : UICollectionViewController {
-    NSArray *_thumbArray;
     NSArray *_movies;
 }
 

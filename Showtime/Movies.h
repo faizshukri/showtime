@@ -12,7 +12,5 @@
 
 @property NSArray *movies;
 -(id)initWithLimit:(int)limit andPage:(int)page;
--(NSArray*)getThumbArray;
 -(NSArray*)getMovies;
-
 @end

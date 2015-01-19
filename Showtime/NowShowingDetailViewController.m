@@ -7,6 +7,7 @@
 //
 
 #import "NowShowingDetailViewController.h"
+#import "APIHelper.h"
 
 @interface NowShowingDetailViewController ()
 

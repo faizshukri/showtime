@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface APIHelper : NSObject
 
 +(NSString*)apikey;
 +(NSArray*)getShowingMoviesWithLimit:(int)limit atPage:(int)page filterLocation:(NSString*)countryCode;
++(NSArray*)getMovieInfoById:(int)movieId;
++(UIImage *)getThumbWithURL:(NSString*)url;
 
 @end
