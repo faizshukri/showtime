@@ -265,4 +265,9 @@
             <point key="canvasLocation" x="1010.5" y="-930.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="review" width="30" height="30"/>
+        <image name="share2" width="30" height="30"/>
+        <image name="star" width="30" height="30"/>
+    </resources>
 </document>
