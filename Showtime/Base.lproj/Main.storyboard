@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wN5-1N-KN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="72.5" y="-93.5"/>
+            <point key="canvasLocation" x="240.5" y="158.5"/>
         </scene>
         <!--Now Showing-->
         <scene sceneID="muX-sj-V4w">
@@ -164,7 +164,7 @@
             </objects>
             <point key="canvasLocation" x="240.5" y="-930.5"/>
         </scene>
-        <!--Movie detail-->
+        <!--Movie Detail-->
         <scene sceneID="2oX-br-ni3">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="Jiq-xN-xbp" customClass="NowShowingDetailViewController" sceneMemberID="viewController">
@@ -197,6 +197,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kPx-kz-847">
+                                <rect key="frame" x="0.0" y="554" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Favourite This!" image="star" id="1Mo-5p-TTr"/>
+                                    <tabBarItem title="Reviews" image="review" id="cIO-fp-Lg2"/>
+                                    <tabBarItem title="Share" image="share2" id="bIH-0K-6U2">
+                                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="-3"/>
+                                    </tabBarItem>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -217,7 +228,7 @@
                         </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="Movie detail" id="b70-eh-N8z"/>
+                    <navigationItem key="navigationItem" title="Movie Detail" id="b70-eh-N8z"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="genresLabel" destination="vxV-kq-rhu" id="iF6-wy-sgz"/>
@@ -228,7 +239,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSF-WD-iZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="810.5" y="-930.5"/>
+            <point key="canvasLocation" x="1010.5" y="-930.5"/>
+        </scene>
+        <!--Reviews-->
+        <scene sceneID="ITI-5g-U4j">
+            <objects>
+                <viewController title="Reviews" id="xhP-0S-5uL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cpY-Lw-OlX"/>
+                        <viewControllerLayoutGuide type="bottom" id="3P3-CM-zoD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mA7-ip-PRC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="9q2-K6-hi0"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="733-og-Lgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1565.5" y="-930.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="review" width="30" height="30"/>
+        <image name="share2" width="30" height="30"/>
+        <image name="star" width="30" height="30"/>
+    </resources>
 </document>
