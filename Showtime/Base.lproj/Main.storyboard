@@ -264,32 +264,5 @@
             </objects>
             <point key="canvasLocation" x="1010.5" y="-930.5"/>
         </scene>
-        <!--Reviews-->
-        <scene sceneID="ITI-5g-U4j">
-            <objects>
-                <viewController title="Reviews" id="xhP-0S-5uL" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cpY-Lw-OlX"/>
-                        <viewControllerLayoutGuide type="bottom" id="3P3-CM-zoD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mA7-ip-PRC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="9q2-K6-hi0"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="733-og-Lgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1565.5" y="-930.5"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="review" width="30" height="30"/>
-        <image name="share2" width="30" height="30"/>
-        <image name="star" width="30" height="30"/>
-    </resources>
 </document>

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Movie.h"
 
-@interface NowShowingDetailViewController : UIViewController
+@interface NowShowingDetailViewController : UIViewController <UITabBarDelegate>
 
 @property Movie *movie;
 @property (weak, nonatomic) IBOutlet UIImageView *thumb;
@@ -20,5 +20,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *synopsisText;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITabBarItem *tabBar1;
+@property (strong, nonatomic) IBOutlet UITabBar *tabBar;
 
 @end

@@ -61,6 +61,11 @@
     //Contains both width & height ... Needed: The height
     return textRect.size;
 }
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    
+}
 /*
 #pragma mark - Navigation
 
