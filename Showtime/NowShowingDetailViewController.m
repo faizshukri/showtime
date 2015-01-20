@@ -34,32 +34,13 @@
                                          context:nil];
     
     CGSize expectedLabelSize = textRect.size;
-    long contentHeight = _synopsisText.frame.origin.y + expectedLabelSize.height + 60;
+    long contentHeight = _synopsisText.frame.origin.y + expectedLabelSize.height + 110;
     _scrollView.contentSize = CGSizeMake(_scrollView.frame.size.width, contentHeight);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(CGSize)frameForText:(NSString*)text sizeWithFont:(UIFont*)font constrainedToSize:(CGSize)size lineBreakMode:(NSLineBreakMode)lineBreakMode  {
-    
-    NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
-    paragraphStyle.lineBreakMode = lineBreakMode;
-    
-    NSDictionary * attributes = @{NSFontAttributeName:font,
-                                  NSParagraphStyleAttributeName:paragraphStyle
-                                  };
-    
-    
-    CGRect textRect = [text boundingRectWithSize:size
-                                         options:NSStringDrawingUsesLineFragmentOrigin
-                                      attributes:attributes
-                                         context:nil];
-    
-    //Contains both width & height ... Needed: The height
-    return textRect.size;
 }
 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
