@@ -19,5 +19,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *synopsisText;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UITabBarItem *tabBar1;
 
 @end
