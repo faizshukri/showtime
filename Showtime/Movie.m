@@ -15,11 +15,13 @@
     self = [super init];
     
     if(self){
-        _movieId   = [[data objectForKey:@"id"] intValue];
-        _title     = [data objectForKey:@"title"];
-        _synopsis  = [data objectForKey:@"synopsis"];
-        _thumbnail = [APIHelper getThumbWithURL:[[data objectForKey:@"posters"] objectForKey:@"thumbnail"]];
-        _genres    = [data objectForKey:@"genres"];
+        _movieId     = [[data objectForKey:@"id"] intValue];
+        _title       = [data objectForKey:@"title"];
+        _synopsis    = [data objectForKey:@"synopsis"];
+        _thumbnail   = [APIHelper getThumbWithURL:[[data objectForKey:@"posters"] objectForKey:@"thumbnail"]];
+        _genres      = [data objectForKey:@"genres"];
+        _mpaa_rating = [data objectForKey:@"mpaa_rating"];
+        _ratings     = [NSString stringWithFormat:@"%1.2f ratings", [[[data objectForKey:@"ratings"] objectForKey:@"critics_score"] intValue] / 10.0 ];
     }
  
     return self;

@@ -46,13 +46,11 @@ static NSString * const reuseIdentifier = @"Cell";
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     
-    NSLog(@"got it");
     UICollectionViewCell *cell = (UICollectionViewCell*) sender;
     NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
     
     NowShowingDetailViewController *showDetail = [segue destinationViewController];
     [showDetail setMovie:[_movies objectAtIndex:indexPath.row]];
-    
 }
 
 

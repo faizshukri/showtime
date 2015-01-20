@@ -22,7 +22,8 @@
     
     [_thumb setImage:_movie.thumbnail];
     [_titleLabel setText:_movie.title];
-    
+    [_genresLabel setText:[_movie.genres componentsJoinedByString:@" / "]];
+    [_pgAndRating setText:[NSString stringWithFormat:@"%@ / %@", _movie.mpaa_rating, _movie.ratings]];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -14,5 +14,7 @@
 @property Movie *movie;
 @property (weak, nonatomic) IBOutlet UIImageView *thumb;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *genresLabel;
+@property (weak, nonatomic) IBOutlet UILabel *pgAndRating;
 
 @end
