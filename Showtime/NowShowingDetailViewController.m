@@ -24,6 +24,18 @@
     [_titleLabel setText:_movie.title];
     [_genresLabel setText:[_movie.genres componentsJoinedByString:@" / "]];
     [_pgAndRating setText:[NSString stringWithFormat:@"%@ / %@", _movie.mpaa_rating, _movie.ratings]];
+    [_synopsisText setText:_movie.synopsis];
+
+    
+    CGSize maximumLabelSize = CGSizeMake(320, FLT_MAX);
+    CGRect textRect = [_synopsisText.text boundingRectWithSize:maximumLabelSize
+                                         options:NSStringDrawingUsesLineFragmentOrigin
+                                      attributes:@{NSFontAttributeName:[UIFont italicSystemFontOfSize:14.0]}
+                                         context:nil];
+    
+    CGSize expectedLabelSize = textRect.size;
+    long contentHeight = _synopsisText.frame.origin.y + expectedLabelSize.height + 60;
+    _scrollView.contentSize = CGSizeMake(_scrollView.frame.size.width, contentHeight);
 }
 
 - (void)didReceiveMemoryWarning {

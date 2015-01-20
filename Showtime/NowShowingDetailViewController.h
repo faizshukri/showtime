@@ -17,4 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *genresLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pgAndRating;
 
+@property (weak, nonatomic) IBOutlet UILabel *synopsisText;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 @end
