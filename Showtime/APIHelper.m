@@ -42,8 +42,17 @@
     
     NSDictionary *result = [APIHelper getResultByUrlString:urlString];
     
+    int total = (int) [[result objectForKey:@"total"] intValue];
+    int maxPage = (total+limit-1)/limit;
+    
+    NSMutableArray* object = [[NSMutableArray alloc] init];
+    
+    if(page <= maxPage){
+        [object addObjectsFromArray:[result objectForKey:@"movies"]];
+    }
+    
     // Return movies array object
-    return (NSArray*)[result objectForKey:@"movies"];
+    return (NSArray*) object;
 }
 
 +(NSArray*)getUpcomingMoviesWithLimit:(int)limit atPage:(int)page{
@@ -52,8 +61,16 @@
     
     NSDictionary *result = [APIHelper getResultByUrlString:urlString];
     
+    int total = (int) [[result objectForKey:@"total"] intValue];
+    int maxPage = (total+limit-1)/limit;
+    
+    NSMutableArray* object = [[NSMutableArray alloc] init];
+    
+    if(page <= maxPage){
+        [object addObjectsFromArray:[result objectForKey:@"movies"]];
+    }
     // Return movies array object
-    return (NSArray*)[result objectForKey:@"movies"];
+    return (NSArray*) object;
 }
 
 +(Movie*)getMovieInfoById:(int)movieId {
