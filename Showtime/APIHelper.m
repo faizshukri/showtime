@@ -14,6 +14,17 @@
     return @"3hygztm99p9ermrfa2gp8dan";
 }
 
++(NSDictionary*)getResultByUrlString:(NSString*)urlString{
+    // Get the json data from the url string
+    NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
+    if(jsonData==nil){
+        NSLog(@"No data returned");
+    }
+    
+    NSError *error;
+    return [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+}
+
 +(NSArray*)getShowingMoviesWithLimit:(int)limit atPage:(int)page filterLocation:(NSString*)countryCode {
     
     // Set default country code to US
@@ -29,14 +40,7 @@
                            page,
                            countryCode];
     
-    // Get the json data from the url string
-    NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
-    if(jsonData==nil){
-        NSLog(@"No data returned");
-    }
-    
-    NSError *error;
-    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+    NSDictionary *result = [APIHelper getResultByUrlString:urlString];
     
     // Return movies array object
     return (NSArray*)[result objectForKey:@"movies"];
@@ -46,14 +50,7 @@
     
     NSString *urlString = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/movies/%d.json?apikey=%@", movieId, [APIHelper apikey]];
     
-    // Get the json data from the url string
-    NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
-    if(jsonData==nil){
-        NSLog(@"No data returned");
-    }
-    
-    NSError *error;
-    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+    NSDictionary *result = [APIHelper getResultByUrlString:urlString];
     
     // Return movies array object
     return [[Movie alloc] initWithData:result];
@@ -63,15 +60,7 @@
     
     NSString *urlString = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/movies/%d/similar.json?apikey=%@&limit=3", movieId, [APIHelper apikey]];
     
-    // Get the json data from the url string
-    NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
-    if(jsonData==nil){
-        NSLog(@"No data returned");
-    }
-    
-    NSError *error;
-    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
-    
+    NSDictionary *result = [APIHelper getResultByUrlString:urlString];
     // Return movies array object
     return (NSArray*)[result objectForKey:@"movies"];
 }
