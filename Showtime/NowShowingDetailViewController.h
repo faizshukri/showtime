@@ -12,12 +12,15 @@
 @interface NowShowingDetailViewController : UIViewController <UITabBarDelegate>
 
 @property Movie *movie;
+@property NSArray* similarMovies;
+
 @property (weak, nonatomic) IBOutlet UIImageView *thumb;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *genresLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pgAndRating;
 
 @property (weak, nonatomic) IBOutlet UILabel *synopsisText;
+@property (weak, nonatomic) IBOutlet UILabel *castsText;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITabBarItem *tabBar1;
 @property (strong, nonatomic) IBOutlet UITabBar *tabBar;

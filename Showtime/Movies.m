@@ -33,4 +33,16 @@
     return movies;
 }
 
+-(NSArray*)getSimilarMoviesByID:(int)movieId{
+    
+    NSArray *similarMovies = [APIHelper getSimilarById:movieId];
+    NSMutableArray *movies = [[NSMutableArray alloc] init];
+    
+    for (int movie = 0; movie < similarMovies.count; movie++) {
+        Movie *tmp = [[Movie alloc] initWithData:[similarMovies objectAtIndex:movie]];
+        [movies addObject:tmp];
+    }
+    return movies;
+}
+
 @end

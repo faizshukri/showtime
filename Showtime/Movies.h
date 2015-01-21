@@ -13,4 +13,5 @@
 @property NSArray *movies;
 -(id)initWithLimit:(int)limit andPage:(int)page;
 -(NSArray*)getMovies;
+-(NSArray*)getSimilarMoviesByID:(int)movieId;
 @end

@@ -18,6 +18,7 @@
 @property NSArray *genres;
 @property NSString *mpaa_rating;
 @property NSString *ratings;
+@property NSArray *cast;
 
 -(id) initWithData:(NSDictionary*)data;
 

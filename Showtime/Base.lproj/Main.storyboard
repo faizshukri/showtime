@@ -212,15 +212,39 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Casts:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQg-Bj-NZk">
+                                        <rect key="frame" x="20" y="239" width="49" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Casts List" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="ifx-5l-i1E">
+                                        <rect key="frame" x="35" y="268" width="320" height="21"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Related Movies:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0u-7C-LSd">
+                                        <rect key="frame" x="20" y="297" width="124" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="LQg-Bj-NZk" firstAttribute="top" secondItem="U5N-Kw-Mck" secondAttribute="bottom" constant="20" id="2c1-Ac-cnT"/>
                                     <constraint firstItem="t2y-f8-iMc" firstAttribute="top" secondItem="66f-TL-PlL" secondAttribute="top" constant="20" id="4PQ-3x-fXw"/>
                                     <constraint firstItem="65E-0y-Cps" firstAttribute="leading" secondItem="66f-TL-PlL" secondAttribute="leading" constant="20" id="5sJ-sw-9zz"/>
                                     <constraint firstItem="vxV-kq-rhu" firstAttribute="top" secondItem="t2y-f8-iMc" secondAttribute="bottom" constant="3" id="73o-B9-aHg"/>
                                     <constraint firstItem="vxV-kq-rhu" firstAttribute="leading" secondItem="FgM-5s-vJH" secondAttribute="trailing" constant="11" id="Hx9-Kv-hRE"/>
+                                    <constraint firstItem="ifx-5l-i1E" firstAttribute="leading" secondItem="66f-TL-PlL" secondAttribute="leading" constant="35" id="Sfd-dQ-8iT"/>
+                                    <constraint firstItem="p0u-7C-LSd" firstAttribute="top" secondItem="ifx-5l-i1E" secondAttribute="bottom" constant="8" id="VL9-iN-Awf"/>
                                     <constraint firstItem="U5N-Kw-Mck" firstAttribute="top" secondItem="65E-0y-Cps" secondAttribute="bottom" constant="8" id="d3G-3I-fuD"/>
                                     <constraint firstItem="U5N-Kw-Mck" firstAttribute="leading" secondItem="66f-TL-PlL" secondAttribute="leading" constant="35" id="dQW-2o-EUj"/>
                                     <constraint firstItem="SfH-pF-PjQ" firstAttribute="leading" secondItem="FgM-5s-vJH" secondAttribute="trailing" constant="11" id="gBP-CG-AbX"/>
+                                    <constraint firstItem="ifx-5l-i1E" firstAttribute="top" secondItem="LQg-Bj-NZk" secondAttribute="bottom" constant="8" id="kvN-4q-jaN"/>
+                                    <constraint firstItem="p0u-7C-LSd" firstAttribute="leading" secondItem="66f-TL-PlL" secondAttribute="leading" constant="20" id="lTV-8F-s5s"/>
+                                    <constraint firstItem="LQg-Bj-NZk" firstAttribute="leading" secondItem="66f-TL-PlL" secondAttribute="leading" constant="20" id="m1s-ov-3Db"/>
                                     <constraint firstItem="FgM-5s-vJH" firstAttribute="leading" secondItem="66f-TL-PlL" secondAttribute="leading" constant="20" id="pZC-ZQ-g7L"/>
                                     <constraint firstItem="SfH-pF-PjQ" firstAttribute="top" secondItem="vxV-kq-rhu" secondAttribute="bottom" constant="25" id="ueD-H2-buA"/>
                                     <constraint firstItem="t2y-f8-iMc" firstAttribute="leading" secondItem="FgM-5s-vJH" secondAttribute="trailing" constant="11" id="wdg-Tz-9m5"/>
@@ -252,6 +276,7 @@
                     <navigationItem key="navigationItem" title="Movie Detail" id="b70-eh-N8z"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="castsText" destination="ifx-5l-i1E" id="FaN-F8-3Zq"/>
                         <outlet property="genresLabel" destination="vxV-kq-rhu" id="iF6-wy-sgz"/>
                         <outlet property="pgAndRating" destination="SfH-pF-PjQ" id="MNT-p3-kSG"/>
                         <outlet property="scrollView" destination="66f-TL-PlL" id="ska-ZS-183"/>

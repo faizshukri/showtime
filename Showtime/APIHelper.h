@@ -15,6 +15,7 @@
 +(NSString*)apikey;
 +(NSArray*)getShowingMoviesWithLimit:(int)limit atPage:(int)page filterLocation:(NSString*)countryCode;
 +(Movie*)getMovieInfoById:(int)movieId;
++(NSArray*)getSimilarById:(int)movieId;
 +(UIImage *)getThumbWithURL:(NSString*)url;
 
 @end
