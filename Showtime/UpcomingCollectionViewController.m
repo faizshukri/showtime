@@ -7,6 +7,7 @@
 //
 
 #import "UpcomingCollectionViewController.h"
+#import "Movie.h"
 
 @interface UpcomingCollectionViewController ()
 
@@ -26,6 +27,11 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    _currentPage = 1;
+    _pageLimit = 15;
+    
+    _movies = [[Movies alloc] initWithLimit:_pageLimit andPage:_currentPage movieType:MOVIE_UPCOMING];
+    _moviesArray = [[NSMutableArray alloc] initWithArray:[_movies getMovies]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,20 +52,21 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete method implementation -- Return the number of sections
-    return 0;
+    return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete method implementation -- Return the number of items in the section
-    return 0;
+    return _moviesArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ThumbCell" forIndexPath:indexPath];
     
     // Configure the cell
+    Movie *movie = [_moviesArray objectAtIndex:[indexPath row]];
+    UIImageView *imgView = [[UIImageView alloc] initWithImage:movie.thumbnail];
+    [cell setBackgroundView:imgView];
     
     return cell;
 }
@@ -94,6 +101,14 @@ static NSString * const reuseIdentifier = @"Cell";
 	
 }
 */
+
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    if (scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.bounds.size.height)){
+        _currentPage++;
+        [_moviesArray addObjectsFromArray:[_movies getMoviesAtPage:_currentPage]];
+        [self.collectionView reloadData];
+    }
+}
 
 // Show NavBar in Root View
 -(void)viewWillAppear:(BOOL)animated{

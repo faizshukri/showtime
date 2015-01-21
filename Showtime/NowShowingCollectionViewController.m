@@ -34,7 +34,7 @@ static NSString * const reuseIdentifier = @"Cell";
     _currentPage = 1;
     
     self.navigationController.navigationBar.translucent = NO;
-    movies = [[Movies alloc] initWithLimit:_pageLimit andPage:_currentPage];
+    movies = [[Movies alloc] initWithLimit:_pageLimit andPage:_currentPage movieType:MOVIE_SHOWING];
     moviesArray = [[NSMutableArray alloc] initWithArray:[movies getMovies]];
 }
 

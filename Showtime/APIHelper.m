@@ -46,6 +46,16 @@
     return (NSArray*)[result objectForKey:@"movies"];
 }
 
++(NSArray*)getUpcomingMoviesWithLimit:(int)limit atPage:(int)page{
+    
+    NSString *urlString = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?apikey=%@&page_limit=%d&page=%d", [APIHelper apikey], limit, page];
+    
+    NSDictionary *result = [APIHelper getResultByUrlString:urlString];
+    
+    // Return movies array object
+    return (NSArray*)[result objectForKey:@"movies"];
+}
+
 +(Movie*)getMovieInfoById:(int)movieId {
     
     NSString *urlString = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/movies/%d.json?apikey=%@", movieId, [APIHelper apikey]];
@@ -56,7 +66,7 @@
     return [[Movie alloc] initWithData:result];
 }
 
-+(NSArray*)getSimilarById:(int)movieId {
++(NSArray*)getSimilarMovieById:(int)movieId {
     
     NSString *urlString = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/movies/%d/similar.json?apikey=%@&limit=3", movieId, [APIHelper apikey]];
     

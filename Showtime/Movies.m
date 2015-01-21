@@ -21,13 +21,19 @@
     
     return self;
 }
--(id)initWithLimit:(int)limit andPage:(int)page{
+-(id)initWithLimit:(int)limit andPage:(int)page movieType:(MovieType)type{
     
     self = [super init];
     
     if(self){
         _limit = limit;
-        _movies = [APIHelper getShowingMoviesWithLimit:limit atPage:page filterLocation:nil];
+        _movieType = type;
+        
+        if(_movieType == MOVIE_UPCOMING){
+            _movies = [APIHelper getUpcomingMoviesWithLimit:_limit atPage:page];
+        } else {
+            _movies = [APIHelper getShowingMoviesWithLimit:limit atPage:page filterLocation:nil];
+        }
     }
     
     return self;
@@ -44,7 +50,12 @@
 }
 
 -(NSArray*)getMoviesAtPage:(int)page {
-    _movies = [APIHelper getShowingMoviesWithLimit:_limit atPage:page filterLocation:nil];
+    
+    if(_movieType == MOVIE_UPCOMING){
+        _movies = [APIHelper getUpcomingMoviesWithLimit:_limit atPage:page];
+    } else {
+        _movies = [APIHelper getShowingMoviesWithLimit:_limit atPage:page filterLocation:nil];
+    }
     
     NSMutableArray *movies = [[NSMutableArray alloc] init];
     
@@ -57,7 +68,7 @@
 
 -(NSArray*)getSimilarMoviesByID:(int)movieId{
     
-    NSArray *similarMovies = [APIHelper getSimilarById:movieId];
+    NSArray *similarMovies = [APIHelper getSimilarMovieById:movieId];
     NSMutableArray *movies = [[NSMutableArray alloc] init];
     
     for (int movie = 0; movie < similarMovies.count; movie++) {
