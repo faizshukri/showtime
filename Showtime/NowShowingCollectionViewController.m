@@ -16,6 +16,8 @@
 
 @implementation NowShowingCollectionViewController
 
+@synthesize movies, moviesArray;
+
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
@@ -28,9 +30,12 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    _pageLimit = 15;
+    _currentPage = 1;
+    
     self.navigationController.navigationBar.translucent = NO;
-    Movies *mv = [[Movies alloc] initWithLimit:15 andPage:1];
-    _movies = [mv getMovies];
+    movies = [[Movies alloc] initWithLimit:_pageLimit andPage:_currentPage];
+    moviesArray = [[NSMutableArray alloc] initWithArray:[movies getMovies]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,7 +55,7 @@ static NSString * const reuseIdentifier = @"Cell";
     NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
     
     NowShowingDetailViewController *showDetail = [segue destinationViewController];
-    [showDetail setMovie:[_movies objectAtIndex:indexPath.row]];
+    [showDetail setMovie:[moviesArray objectAtIndex:indexPath.row]];
 }
 
 
@@ -64,14 +69,14 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 #warning Incomplete method implementation -- Return the number of items in the section
-    return _movies.count;
+    return moviesArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ThumbCell" forIndexPath:indexPath];
     
     // Configure the cell
-    Movie *movie = [_movies objectAtIndex:[indexPath row]];
+    Movie *movie = [moviesArray objectAtIndex:[indexPath row]];
     UIImageView *imgView = [[UIImageView alloc] initWithImage:movie.thumbnail];
     [cell setBackgroundView:imgView];
     
@@ -109,6 +114,13 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 */
 
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    if (scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.bounds.size.height)){
+        _currentPage++;
+        [moviesArray addObjectsFromArray:[movies getMoviesAtPage:_currentPage]];
+        [self.collectionView reloadData];
+    }
+}
 // Show NavBar in Root View
 -(void)viewWillAppear:(BOOL)animated{
     [self.navigationController setNavigationBarHidden:NO animated:YES];

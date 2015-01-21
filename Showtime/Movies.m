@@ -12,11 +12,21 @@
 
 @implementation Movies
 
+-(id)init{
+    self = [super init];
+    
+    if(self){
+        _limit = 15;
+    }
+    
+    return self;
+}
 -(id)initWithLimit:(int)limit andPage:(int)page{
     
     self = [super init];
     
     if(self){
+        _limit = limit;
         _movies = [APIHelper getShowingMoviesWithLimit:limit atPage:page filterLocation:nil];
     }
     
@@ -24,6 +34,18 @@
 }
 
 -(NSArray*)getMovies{
+    NSMutableArray *movies = [[NSMutableArray alloc] init];
+    
+    for (int movie = 0; movie < _movies.count; movie++) {
+        Movie *tmp = [[Movie alloc] initWithData:[_movies objectAtIndex:movie]];
+        [movies addObject:tmp];
+    }
+    return movies;
+}
+
+-(NSArray*)getMoviesAtPage:(int)page {
+    _movies = [APIHelper getShowingMoviesWithLimit:_limit atPage:page filterLocation:nil];
+    
     NSMutableArray *movies = [[NSMutableArray alloc] init];
     
     for (int movie = 0; movie < _movies.count; movie++) {

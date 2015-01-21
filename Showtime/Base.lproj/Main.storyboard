@@ -111,7 +111,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Xbc-5y-h2y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FB3-DC-tEh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Movies : NSObject
+@interface Movies : NSObject {
+    int _limit;
+}
 
 @property NSArray *movies;
 -(id)initWithLimit:(int)limit andPage:(int)page;
 -(NSArray*)getMovies;
+-(NSArray*)getMoviesAtPage:(int)page;
 -(NSArray*)getSimilarMoviesByID:(int)movieId;
 @end

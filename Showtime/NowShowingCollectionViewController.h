@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Movies.h"
 
-@interface NowShowingCollectionViewController : UICollectionViewController {
-    NSArray *_movies;
+@interface NowShowingCollectionViewController : UICollectionViewController <UIScrollViewDelegate>{
+    int _currentPage;
+    int _pageLimit;
 }
+
+@property Movies *movies;
+@property NSMutableArray *moviesArray;
 
 @end
