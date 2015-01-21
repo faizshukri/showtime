@@ -22,7 +22,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *synopsisText;
 @property (weak, nonatomic) IBOutlet UILabel *castsText;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UITabBarItem *tabBar1;
-@property (strong, nonatomic) IBOutlet UITabBar *tabBar;
+
+@property (weak, nonatomic) IBOutlet UITabBar *tabBar;
+
 
 @end

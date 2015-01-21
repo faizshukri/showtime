@@ -7,6 +7,7 @@
 //
 
 #import "NowShowingDetailViewController.h"
+#import "ReviewsViewController.h"
 #import "APIHelper.h"
 #import "Movies.h"
 
@@ -17,7 +18,12 @@
 @implementation NowShowingDetailViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    [self tabBar:self.tabBar didSelectItem:[self.tabBar.items firstObject]];
+    
+    
     // Do any additional setup after loading the view.
     _movie = [APIHelper getMovieInfoById:_movie.movieId];
     _similarMovies = [[[Movies alloc] init] getSimilarMoviesByID:_movie.movieId];
@@ -54,17 +60,35 @@
     
     long contentHeight = similarPanel.frame.origin.y + similarPanel.frame.size.height + 70;
     _scrollView.contentSize = CGSizeMake(_scrollView.frame.size.width, contentHeight);
+    
+    
+    
 }
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item;
+{
+    switch (item.tag)
+    {
+        case 2:
+            NSLog(@"Favor This!");
+            break;
+        case 3:
+            NSLog(@"Read Reviews");
+            break;
+        case 4:
+            NSLog(@"Share with your friends");
+            break;
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-{
-    
-}
+
+
 /*
 #pragma mark - Navigation
 
