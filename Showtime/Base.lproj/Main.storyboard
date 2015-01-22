@@ -189,6 +189,9 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="Jiq-xN-xbp" kind="show" id="QFU-Qm-9uA"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionHeader" id="k3G-d1-LWV">
@@ -386,4 +389,7 @@
         <image name="share2" width="30" height="30"/>
         <image name="star" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="QFU-Qm-9uA"/>
+    </inferredMetricsTieBreakers>
 </document>
