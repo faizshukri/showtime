@@ -21,6 +21,13 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"stimebg.png"] drawInRect:self.view.bounds];
+    UIImage *bground = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:bground];
+    
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     

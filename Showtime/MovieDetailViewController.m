@@ -7,7 +7,6 @@
 //
 
 #import "MovieDetailViewController.h"
-#import "ReviewsViewController.h"
 #import "APIHelper.h"
 #import "Movies.h"
 
@@ -21,8 +20,14 @@
     
     [super viewDidLoad];
     
-    [self tabBar:self.tabBar didSelectItem:[self.tabBar.items firstObject]];
+    [self.navigationController setToolbarHidden: NO];
     
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"stimebg.png"] drawInRect:self.view.bounds];
+    UIImage *bground = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:bground];
     
     // Do any additional setup after loading the view.
     _movie = [APIHelper getMovieInfoById:_movie.movieId];
@@ -34,6 +39,8 @@
     [_pgAndRating setText:[NSString stringWithFormat:@"%@ / %@", _movie.mpaa_rating, _movie.ratings]];
     [_synopsisText setText:_movie.synopsis];
     [_castsText setText:[_movie.cast componentsJoinedByString:@"\n"]];
+    
+   
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -65,20 +72,32 @@
     
 }
 
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item;
+-(IBAction)shareButton:(UIBarButtonItem *)sender
 {
-    switch (item.tag)
-    {
-        case 2:
-            NSLog(@"Favor This!");
-            break;
-        case 3:
-            NSLog(@"Read Reviews");
-            break;
-        case 4:
-            NSLog(@"Share with your friends");
-            break;
-    }
+    NSString *textToShare = @"Testing";
+    NSURL *myWebsite = _movie.pageURL;
+    
+    NSArray *objectsToShare = @[textToShare, myWebsite];
+    
+    UIActivityViewController *shareType = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    
+    NSArray *excludeType = @[UIActivityTypeAirDrop,
+                                   UIActivityTypePrint,
+                                   UIActivityTypeAssignToContact,
+                                   UIActivityTypeSaveToCameraRoll,
+                                   UIActivityTypeAddToReadingList,
+                                   UIActivityTypePostToFlickr,
+                                   UIActivityTypePostToVimeo];
+    
+    shareType.excludedActivityTypes = excludeType;
+    
+    [self presentViewController:shareType animated:YES completion:nil];
+}
+
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setToolbarHidden:YES];
 }
 
 

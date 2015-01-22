@@ -2,7 +2,7 @@
 //  ReviewsViewController.m
 //  Showtime
 //
-//  Created by QAini on 1/20/15.
+//  Created by QAini on 1/22/15.
 //  Copyright (c) 2015 Faiz Shukri. All rights reserved.
 //
 
@@ -15,16 +15,30 @@
 @implementation ReviewsViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor blueColor];
+    [super viewDidLoad];
+    
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"stimebg.png"] drawInRect:self.view.bounds];
+    UIImage *bground = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:bground];
+    
+    // Do any additional setup after loading the view.
+}
+
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setToolbarHidden:NO];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation

@@ -16,9 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"stimebg.png"] drawInRect:self.view.bounds];
+    UIImage *bground = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:bground];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.translucent = NO;
 }
+
+
+// Hide NavBar in Root View
+-(void)viewWillAppear:(BOOL)animated{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -35,9 +49,6 @@
 }
 */
 
-// Hide NavBar in Root View
--(void)viewWillAppear:(BOOL)animated{
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-}
+
 
 @end

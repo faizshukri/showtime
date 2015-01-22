@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		361A03981A6F0A1C00B8AAF4 /* ReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 361A03961A6F0A1C00B8AAF4 /* ReviewsViewController.m */; };
-		361A03991A6F0A1C00B8AAF4 /* ReviewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 361A03971A6F0A1C00B8AAF4 /* ReviewsViewController.xib */; };
+		3665EF441A714BD200173708 /* stimebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3665EF431A714BD200173708 /* stimebg.png */; };
+		3665EF461A714CE200173708 /* showtimelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3665EF451A714CE200173708 /* showtimelogo.png */; };
+		3665EF491A714DD100173708 /* ReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3665EF481A714DD100173708 /* ReviewsViewController.m */; };
 		C31E1E5E1A6D9F6400C7AB04 /* Movies.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E5D1A6D9F6400C7AB04 /* Movies.m */; };
 		C31E1E611A6D9FAA00C7AB04 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E601A6D9FAA00C7AB04 /* Movie.m */; };
 		C31E1E671A6DA7B300C7AB04 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E661A6DA7B300C7AB04 /* MovieDetailViewController.m */; };
@@ -35,9 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		361A03951A6F0A1C00B8AAF4 /* ReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReviewsViewController.h; path = ../ReviewsViewController.h; sourceTree = "<group>"; };
-		361A03961A6F0A1C00B8AAF4 /* ReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReviewsViewController.m; path = ../ReviewsViewController.m; sourceTree = "<group>"; };
-		361A03971A6F0A1C00B8AAF4 /* ReviewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewsViewController.xib; path = ../ReviewsViewController.xib; sourceTree = "<group>"; };
+		3665EF431A714BD200173708 /* stimebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stimebg.png; sourceTree = "<group>"; };
+		3665EF451A714CE200173708 /* showtimelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = showtimelogo.png; sourceTree = "<group>"; };
+		3665EF471A714DD100173708 /* ReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsViewController.h; sourceTree = "<group>"; };
+		3665EF481A714DD100173708 /* ReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsViewController.m; sourceTree = "<group>"; };
 		C31E1E5C1A6D9F6400C7AB04 /* Movies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movies.h; sourceTree = "<group>"; };
 		C31E1E5D1A6D9F6400C7AB04 /* Movies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movies.m; sourceTree = "<group>"; };
 		C31E1E5F1A6D9FAA00C7AB04 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
@@ -118,13 +120,14 @@
 				C31E1EAD1A6F380C00C7AB04 /* UpcomingCollectionViewController.m */,
 				C31E1E651A6DA7B300C7AB04 /* MovieDetailViewController.h */,
 				C31E1E661A6DA7B300C7AB04 /* MovieDetailViewController.m */,
+				3665EF471A714DD100173708 /* ReviewsViewController.h */,
+				3665EF481A714DD100173708 /* ReviewsViewController.m */,
+				3665EF431A714BD200173708 /* stimebg.png */,
+				3665EF451A714CE200173708 /* showtimelogo.png */,
 				C31E1E5C1A6D9F6400C7AB04 /* Movies.h */,
 				C31E1E5D1A6D9F6400C7AB04 /* Movies.m */,
 				C31E1E5F1A6D9FAA00C7AB04 /* Movie.h */,
 				C31E1E601A6D9FAA00C7AB04 /* Movie.m */,
-				361A03951A6F0A1C00B8AAF4 /* ReviewsViewController.h */,
-				361A03961A6F0A1C00B8AAF4 /* ReviewsViewController.m */,
-				361A03971A6F0A1C00B8AAF4 /* ReviewsViewController.xib */,
 				C34581991A55D66C001419B6 /* Images.xcassets */,
 				C34581891A55D66C001419B6 /* Supporting Files */,
 			);
@@ -239,8 +242,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34581981A55D66C001419B6 /* Main.storyboard in Resources */,
+				3665EF441A714BD200173708 /* stimebg.png in Resources */,
+				3665EF461A714CE200173708 /* showtimelogo.png in Resources */,
 				C345819D1A55D66C001419B6 /* LaunchScreen.xib in Resources */,
-				361A03991A6F0A1C00B8AAF4 /* ReviewsViewController.xib in Resources */,
 				C345819A1A55D66C001419B6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,9 +269,9 @@
 				C31E1EAE1A6F380C00C7AB04 /* UpcomingCollectionViewController.m in Sources */,
 				C363428C1A6AC01600040B09 /* NowShowingCollectionViewController.m in Sources */,
 				C31E1E5E1A6D9F6400C7AB04 /* Movies.m in Sources */,
-				361A03981A6F0A1C00B8AAF4 /* ReviewsViewController.m in Sources */,
 				C3C0E9D91A5E8FCE006EB147 /* MainViewController.m in Sources */,
 				C31E1E6A1A6DB3FB00C7AB04 /* APIHelper.m in Sources */,
+				3665EF491A714DD100173708 /* ReviewsViewController.m in Sources */,
 				C345818C1A55D66C001419B6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,10 +397,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Showtime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE = "d5c79870-6ebd-420c-a2ce-2f0d4318c160";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -407,10 +412,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Showtime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE = "d5c79870-6ebd-420c-a2ce-2f0d4318c160";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
