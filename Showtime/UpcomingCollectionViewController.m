@@ -31,7 +31,7 @@ static NSString * const reuseIdentifier = @"Cell";
     _pageLimit = 15;
     
     _movies = [[Movies alloc] initWithLimit:_pageLimit andPage:_currentPage movieType:MOVIE_UPCOMING];
-    _moviesArray = [[NSMutableArray alloc] initWithArray:[_movies getMovies]];
+    _movieInSection = [[NSMutableDictionary alloc] initWithDictionary:[_movies getMoviesInSections]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,23 +52,36 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 1;
+    return _movieInSection.count;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return _moviesArray.count;
+    return [[[_movieInSection allValues] objectAtIndex:section] count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ThumbCell" forIndexPath:indexPath];
     
     // Configure the cell
-    Movie *movie = [_moviesArray objectAtIndex:[indexPath row]];
+    Movie *movie = [[[_movieInSection allValues] objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     UIImageView *imgView = [[UIImageView alloc] initWithImage:movie.thumbnail];
     [cell setBackgroundView:imgView];
     
     return cell;
+}
+
+-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionReusableView *sectionHeader = [self.collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"sectionHeader" forIndexPath:indexPath];
+    
+    // Draw section header only once. If detecting that it already has title, just ignore
+    if([[sectionHeader subviews] count] == 0){
+        UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 15, 200, 40)];
+        [headerLabel setText:[[_movieInSection allKeys] objectAtIndex:indexPath.section]];
+        [sectionHeader addSubview:headerLabel];
+    }
+    return sectionHeader;
 }
 
 #pragma mark <UICollectionViewDelegate>
@@ -105,7 +118,14 @@ static NSString * const reuseIdentifier = @"Cell";
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     if (scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.bounds.size.height)){
         _currentPage++;
-        [_moviesArray addObjectsFromArray:[_movies getMoviesAtPage:_currentPage]];
+        NSDictionary *movieSectionAtPage = [_movies getMoviesInSectionsAtPage:_currentPage];
+        for(NSString *key in [movieSectionAtPage allKeys]){
+            if( [[_movieInSection allKeys] containsObject:key] ){
+                [(NSMutableArray*)[_movieInSection objectForKey:key] addObjectsFromArray:[movieSectionAtPage objectForKey:key]];
+            } else {
+                [(NSMutableDictionary*)_movieInSection setObject:[movieSectionAtPage objectForKey:key] forKey:key];
+            }
+        }
         [self.collectionView reloadData];
     }
 }

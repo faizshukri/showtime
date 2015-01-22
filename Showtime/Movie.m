@@ -28,6 +28,10 @@
             [castTmp addObject:[NSString stringWithFormat:@"* %@ - %@", [obj objectForKey:@"name"], [[obj objectForKey:@"characters"] componentsJoinedByString:@","]]];
         }
         _cast        = castTmp;
+    
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"yyyy-MM-dd"];
+        _release_date = [dateFormat dateFromString:[[data objectForKey:@"release_dates"] objectForKey:@"theater"]];
     }
  
     return self;

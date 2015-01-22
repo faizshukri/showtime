@@ -39,6 +39,7 @@
     return self;
 }
 
+ // Return array of movies in one level
 -(NSArray*)getMovies{
     NSMutableArray *movies = [[NSMutableArray alloc] init];
     
@@ -49,21 +50,45 @@
     return movies;
 }
 
--(NSArray*)getMoviesAtPage:(int)page {
+ // Return array of movies, structured into several section array
+-(NSDictionary*)getMoviesInSections{
     
-    if(_movieType == MOVIE_UPCOMING){
-        _movies = [APIHelper getUpcomingMoviesWithLimit:_limit atPage:page];
-    } else {
-        _movies = [APIHelper getShowingMoviesWithLimit:_limit atPage:page filterLocation:nil];
-    }
-    
-    NSMutableArray *movies = [[NSMutableArray alloc] init];
+    NSMutableDictionary *section = [[NSMutableDictionary alloc] init];
     
     for (int movie = 0; movie < _movies.count; movie++) {
         Movie *tmp = [[Movie alloc] initWithData:[_movies objectAtIndex:movie]];
-        [movies addObject:tmp];
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"MMMM yyyy"];
+        
+        NSString *sectionTitle = [dateFormatter stringFromDate:tmp.release_date ];
+        
+        if([section objectForKey:sectionTitle]){
+            // Dictionary has array of movies
+            [(NSMutableArray*)[section objectForKey:sectionTitle] addObject:tmp];
+        } else {
+            // First item in the section
+            NSMutableArray *newSection = [[NSMutableArray alloc] init];
+            [newSection addObject:tmp];
+            
+            [section setObject:newSection forKey:sectionTitle];
+        }
     }
-    return movies;
+    
+    return section;
+}
+
+-(NSArray*)getMoviesAtPage:(int)page {
+    
+    if(_movieType == MOVIE_UPCOMING) _movies =[APIHelper getUpcomingMoviesWithLimit:_limit atPage:page];
+    else                             _movies =[APIHelper getShowingMoviesWithLimit:_limit atPage:page filterLocation:nil];
+    
+    return [self getMovies];
+}
+
+-(NSDictionary *)getMoviesInSectionsAtPage:(int)page{
+    _movies = [APIHelper getUpcomingMoviesWithLimit:_limit atPage:page];
+    return [self getMoviesInSections];
 }
 
 -(NSArray*)getSimilarMoviesByID:(int)movieId{

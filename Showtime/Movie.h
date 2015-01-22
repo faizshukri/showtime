@@ -19,6 +19,7 @@
 @property NSString *mpaa_rating;
 @property NSString *ratings;
 @property NSArray *cast;
+@property NSDate *release_date;
 
 -(id) initWithData:(NSDictionary*)data;
 

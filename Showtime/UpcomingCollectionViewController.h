@@ -15,6 +15,6 @@
 }
 
 @property Movies *movies;
-@property NSMutableArray *moviesArray;
+@property NSMutableDictionary *movieInSection;
 
 @end

@@ -175,7 +175,7 @@
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="XTD-Gc-nqr">
                             <size key="itemSize" width="100" height="133"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="15" minY="10" maxX="15" maxY="10"/>
                         </collectionViewFlowLayout>
@@ -191,6 +191,10 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionHeader" id="k3G-d1-LWV">
+                            <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="Sbe-nD-wvR" id="FJc-Fj-hWH"/>
                             <outlet property="delegate" destination="Sbe-nD-wvR" id="NnE-UR-u77"/>

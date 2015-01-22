@@ -19,8 +19,11 @@ typedef enum {
 }
 
 @property NSArray *movies;
+
 -(id)initWithLimit:(int)limit andPage:(int)page movieType:(MovieType)type;
 -(NSArray*)getMovies;
+-(NSDictionary*)getMoviesInSections;
 -(NSArray*)getMoviesAtPage:(int)page;
+-(NSDictionary*)getMoviesInSectionsAtPage:(int)page;
 -(NSArray*)getSimilarMoviesByID:(int)movieId;
 @end
