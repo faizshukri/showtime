@@ -16,6 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"stimebg.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     // Do any additional setup after loading the view.
 }
 

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Movie.h"
 
-@interface NowShowingDetailViewController : UIViewController <UITabBarDelegate>
+@interface NowShowingDetailViewController : UIViewController
 
 @property Movie *movie;
 @property NSArray* similarMovies;
@@ -23,7 +23,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *castsText;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
-@property (weak, nonatomic) IBOutlet UITabBar *tabBar;
+
+- (IBAction)shareButton:(UIBarButtonItem *)sender;
 
 
 @end

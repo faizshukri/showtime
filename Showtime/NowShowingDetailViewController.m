@@ -7,9 +7,10 @@
 //
 
 #import "NowShowingDetailViewController.h"
-#import "ReviewsViewController.h"
+#import "NowShowingCollectionViewController.h"
 #import "APIHelper.h"
 #import "Movies.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface NowShowingDetailViewController ()
 
@@ -21,14 +22,25 @@
     
     [super viewDidLoad];
     
-    [self tabBar:self.tabBar didSelectItem:[self.tabBar.items firstObject]];
-    
+    self.navigationController.toolbarHidden = NO;
     
     // Do any additional setup after loading the view.
+    
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"stimebg.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    
+
     _movie = [APIHelper getMovieInfoById:_movie.movieId];
     _similarMovies = [[[Movies alloc] init] getSimilarMoviesByID:_movie.movieId];
     
     [_thumb setImage:_movie.thumbnail];
+    [_thumb.layer setBorderWidth:2.0];
+    [_thumb.layer setBorderColor:[UIColor blackColor].CGColor];
+    
     [_titleLabel setText:_movie.title];
     [_genresLabel setText:[_movie.genres componentsJoinedByString:@" / "]];
     [_pgAndRating setText:[NSString stringWithFormat:@"%@ / %@", _movie.mpaa_rating, _movie.ratings]];
@@ -65,33 +77,35 @@
     
 }
 
-- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item;
-{
-    switch (item.tag)
-    {
-        case 2:
-            NSLog(@"Favor This!");
-            break;
-        case 3:
-            NSLog(@"Read Reviews");
-            break;
-        case 4:
-            NSLog(@"Share with your friends");
-            break;
-    }
-}
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)shareButton:(UIBarButtonItem *)sender
+{
+    NSString *movieTitle = @"Testing";
+    NSURL *movieWeb = [NSURL URLWithString:@"http://www.google.com/"];
+    
+    NSArray *shareMovie = @[movieTitle, movieWeb];
+    
+    UIActivityViewController *sharing = [[UIActivityViewController alloc] initWithActivityItems:shareMovie applicationActivities:nil];
+   
+    NSArray *exclude = @[UIActivityTypeAirDrop,UIActivityTypePrint, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll,UIActivityTypeAddToReadingList,UIActivityTypePostToFlickr, UIActivityTypePostToVimeo];
+    
+   sharing.excludedActivityTypes = exclude;
+    
+    [self presentViewController:sharing animated:YES completion:nil];
+}
 
 
-/*
+
 #pragma mark - Navigation
 
+-(void)viewWillDisappear:(BOOL)animated{
+    [self.navigationController setToolbarHidden:YES animated:YES];
+}
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
