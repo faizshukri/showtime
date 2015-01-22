@@ -20,6 +20,7 @@
 @property NSString *ratings;
 @property NSArray *cast;
 @property NSDate *release_date;
+@property NSURL *pageURL;
 
 -(id) initWithData:(NSDictionary*)data;
 
