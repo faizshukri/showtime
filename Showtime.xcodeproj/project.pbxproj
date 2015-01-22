@@ -11,7 +11,7 @@
 		361A03991A6F0A1C00B8AAF4 /* ReviewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 361A03971A6F0A1C00B8AAF4 /* ReviewsViewController.xib */; };
 		C31E1E5E1A6D9F6400C7AB04 /* Movies.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E5D1A6D9F6400C7AB04 /* Movies.m */; };
 		C31E1E611A6D9FAA00C7AB04 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E601A6D9FAA00C7AB04 /* Movie.m */; };
-		C31E1E671A6DA7B300C7AB04 /* NowShowingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E661A6DA7B300C7AB04 /* NowShowingDetailViewController.m */; };
+		C31E1E671A6DA7B300C7AB04 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E661A6DA7B300C7AB04 /* MovieDetailViewController.m */; };
 		C31E1E6A1A6DB3FB00C7AB04 /* APIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E691A6DB3FB00C7AB04 /* APIHelper.m */; };
 		C31E1EAE1A6F380C00C7AB04 /* UpcomingCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1EAD1A6F380C00C7AB04 /* UpcomingCollectionViewController.m */; };
 		C345818C1A55D66C001419B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C345818B1A55D66C001419B6 /* main.m */; };
@@ -42,8 +42,8 @@
 		C31E1E5D1A6D9F6400C7AB04 /* Movies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movies.m; sourceTree = "<group>"; };
 		C31E1E5F1A6D9FAA00C7AB04 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		C31E1E601A6D9FAA00C7AB04 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
-		C31E1E651A6DA7B300C7AB04 /* NowShowingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowShowingDetailViewController.h; sourceTree = "<group>"; };
-		C31E1E661A6DA7B300C7AB04 /* NowShowingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowShowingDetailViewController.m; sourceTree = "<group>"; };
+		C31E1E651A6DA7B300C7AB04 /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
+		C31E1E661A6DA7B300C7AB04 /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
 		C31E1E681A6DB3FB00C7AB04 /* APIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHelper.h; sourceTree = "<group>"; };
 		C31E1E691A6DB3FB00C7AB04 /* APIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHelper.m; sourceTree = "<group>"; };
 		C31E1EAC1A6F380C00C7AB04 /* UpcomingCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpcomingCollectionViewController.h; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 				C3C0E9D81A5E8FCE006EB147 /* MainViewController.m */,
 				C363428A1A6AC01600040B09 /* NowShowingCollectionViewController.h */,
 				C363428B1A6AC01600040B09 /* NowShowingCollectionViewController.m */,
-				C31E1E651A6DA7B300C7AB04 /* NowShowingDetailViewController.h */,
-				C31E1E661A6DA7B300C7AB04 /* NowShowingDetailViewController.m */,
+				C31E1E651A6DA7B300C7AB04 /* MovieDetailViewController.h */,
+				C31E1E661A6DA7B300C7AB04 /* MovieDetailViewController.m */,
 				C31E1EAC1A6F380C00C7AB04 /* UpcomingCollectionViewController.h */,
 				C31E1EAD1A6F380C00C7AB04 /* UpcomingCollectionViewController.m */,
 				C31E1E5C1A6D9F6400C7AB04 /* Movies.h */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C31E1E671A6DA7B300C7AB04 /* NowShowingDetailViewController.m in Sources */,
+				C31E1E671A6DA7B300C7AB04 /* MovieDetailViewController.m in Sources */,
 				C31E1E611A6D9FAA00C7AB04 /* Movie.m in Sources */,
 				C345818F1A55D66C001419B6 /* AppDelegate.m in Sources */,
 				C31E1EAE1A6F380C00C7AB04 /* UpcomingCollectionViewController.m in Sources */,

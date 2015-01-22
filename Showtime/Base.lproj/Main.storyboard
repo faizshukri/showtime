@@ -215,7 +215,7 @@
         <!--Movie Detail-->
         <scene sceneID="2oX-br-ni3">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Jiq-xN-xbp" customClass="NowShowingDetailViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Jiq-xN-xbp" customClass="MovieDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RVy-8x-Eda"/>
                         <viewControllerLayoutGuide type="bottom" id="8c9-Vb-pYH"/>

@@ -7,7 +7,7 @@
 //
 
 #import "UpcomingCollectionViewController.h"
-#import "NowShowingDetailViewController.h"
+#import "MovieDetailViewController.h"
 #import "Movie.h"
 
 @interface UpcomingCollectionViewController ()
@@ -50,7 +50,7 @@ static NSString * const reuseIdentifier = @"Cell";
     UICollectionViewCell *cell = (UICollectionViewCell*) sender;
     NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
     
-    NowShowingDetailViewController *showDetail = [segue destinationViewController];
+    MovieDetailViewController *showDetail = [segue destinationViewController];
     [showDetail setMovie:[[[_movieInSection allValues] objectAtIndex:indexPath.section] objectAtIndex:indexPath.row]];
 }
 

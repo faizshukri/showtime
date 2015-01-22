@@ -6,16 +6,16 @@
 //  Copyright (c) 2015 Faiz Shukri. All rights reserved.
 //
 
-#import "NowShowingDetailViewController.h"
+#import "MovieDetailViewController.h"
 #import "ReviewsViewController.h"
 #import "APIHelper.h"
 #import "Movies.h"
 
-@interface NowShowingDetailViewController ()
+@interface MovieDetailViewController ()
 
 @end
 
-@implementation NowShowingDetailViewController
+@implementation MovieDetailViewController
 
 - (void)viewDidLoad {
     

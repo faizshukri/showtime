@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Movie.h"
 
-@interface NowShowingDetailViewController : UIViewController <UITabBarDelegate>
+@interface MovieDetailViewController : UIViewController <UITabBarDelegate>
 
 @property Movie *movie;
 @property NSArray* similarMovies;
