@@ -101,4 +101,11 @@
         return [[UIImage alloc] initWithData:imageData];
 }
 
++(NSArray*) getReviewOfMovie:(int)movieId {
+    NSString *urlString = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/movies/%d/reviews.json?apikey=%@", movieId, [APIHelper apikey]];
+    
+    NSDictionary *result = [APIHelper getResultByUrlString:urlString];
+    return (NSArray*)[result objectForKey:@"reviews"];
+}
+
 @end

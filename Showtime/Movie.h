@@ -21,6 +21,7 @@
 @property NSArray *cast;
 @property NSDate *release_date;
 @property NSURL *pageURL;
+@property (nonatomic) NSArray *reviews;
 
 -(id) initWithData:(NSDictionary*)data;
 

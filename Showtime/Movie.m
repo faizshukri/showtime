@@ -8,6 +8,7 @@
 
 #import "Movie.h"
 #import "APIHelper.h"
+#import "Review.h"
 
 @implementation Movie
 
@@ -37,6 +38,19 @@
     }
  
     return self;
+}
+
+-(NSArray *)reviews{
+    NSArray *reviewData = [APIHelper getReviewOfMovie:_movieId];
+    
+    NSMutableArray *reviews = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary *data in reviewData) {
+        Review *review = [[Review alloc] initWithData:data];
+        [reviews addObject:review];
+    }
+    
+    return (NSArray*) reviews;
 }
 
 @end

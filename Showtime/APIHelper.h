@@ -21,4 +21,5 @@
 +(NSArray*)getSimilarMovieById:(int)movieId;
 +(UIImage *)getThumbWithURL:(NSString*)url;
 
++(NSArray*) getReviewOfMovie:(int)movieId;
 @end
