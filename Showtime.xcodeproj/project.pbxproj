@@ -11,6 +11,15 @@
 		3665EF461A714CE200173708 /* showtimelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3665EF451A714CE200173708 /* showtimelogo.png */; };
 		3665EF491A714DD100173708 /* ReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3665EF481A714DD100173708 /* ReviewsViewController.m */; };
 		3665EF4B1A71BB7900173708 /* HarlowSolidItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3665EF4A1A71B05B00173708 /* HarlowSolidItalic.ttf */; };
+		C30602DE1A72BD6E00914AFC /* Cinema.m in Sources */ = {isa = PBXBuildFile; fileRef = C30602DB1A72BD6E00914AFC /* Cinema.m */; };
+		C30602DF1A72BD6E00914AFC /* CinemapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C30602DD1A72BD6E00914AFC /* CinemapViewController.m */; };
+		C30602E51A72C35C00914AFC /* CinemapPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C30602E41A72C35C00914AFC /* CinemapPopoverViewController.m */; };
+		C30602E91A72C3E500914AFC /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = C30602E81A72C3E500914AFC /* marker.png */; };
+		C30602EE1A72C7DB00914AFC /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = C30602EB1A72C7DB00914AFC /* WYPopoverController.m */; };
+		C30602F11A72C88500914AFC /* Sheffield.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C30602F01A72C88500914AFC /* Sheffield.gpx */; };
+		C30602F31A72C93600914AFC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30602F21A72C93600914AFC /* MapKit.framework */; };
+		C30602F51A72C93C00914AFC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30602F41A72C93C00914AFC /* CoreLocation.framework */; };
+		C30602F71A72C94400914AFC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30602F61A72C94400914AFC /* QuartzCore.framework */; };
 		C31E1E5E1A6D9F6400C7AB04 /* Movies.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E5D1A6D9F6400C7AB04 /* Movies.m */; };
 		C31E1E611A6D9FAA00C7AB04 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E601A6D9FAA00C7AB04 /* Movie.m */; };
 		C31E1E671A6DA7B300C7AB04 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E661A6DA7B300C7AB04 /* MovieDetailViewController.m */; };
@@ -43,6 +52,19 @@
 		3665EF471A714DD100173708 /* ReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsViewController.h; sourceTree = "<group>"; };
 		3665EF481A714DD100173708 /* ReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsViewController.m; sourceTree = "<group>"; };
 		3665EF4A1A71B05B00173708 /* HarlowSolidItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HarlowSolidItalic.ttf; sourceTree = "<group>"; };
+		C30602DA1A72BD6E00914AFC /* Cinema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cinema.h; sourceTree = "<group>"; };
+		C30602DB1A72BD6E00914AFC /* Cinema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cinema.m; sourceTree = "<group>"; };
+		C30602DC1A72BD6E00914AFC /* CinemapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinemapViewController.h; sourceTree = "<group>"; };
+		C30602DD1A72BD6E00914AFC /* CinemapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinemapViewController.m; sourceTree = "<group>"; };
+		C30602E31A72C35C00914AFC /* CinemapPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinemapPopoverViewController.h; sourceTree = "<group>"; };
+		C30602E41A72C35C00914AFC /* CinemapPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinemapPopoverViewController.m; sourceTree = "<group>"; };
+		C30602E81A72C3E500914AFC /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker.png; sourceTree = "<group>"; };
+		C30602EA1A72C7DB00914AFC /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopoverController.h; sourceTree = "<group>"; };
+		C30602EB1A72C7DB00914AFC /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
+		C30602F01A72C88500914AFC /* Sheffield.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Sheffield.gpx; sourceTree = "<group>"; };
+		C30602F21A72C93600914AFC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C30602F41A72C93C00914AFC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C30602F61A72C94400914AFC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C31E1E5C1A6D9F6400C7AB04 /* Movies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movies.h; sourceTree = "<group>"; };
 		C31E1E5D1A6D9F6400C7AB04 /* Movies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movies.m; sourceTree = "<group>"; };
 		C31E1E5F1A6D9FAA00C7AB04 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
@@ -77,6 +99,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C30602F71A72C94400914AFC /* QuartzCore.framework in Frameworks */,
+				C30602F51A72C93C00914AFC /* CoreLocation.framework in Frameworks */,
+				C30602F31A72C93600914AFC /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +118,9 @@
 		C345817D1A55D66C001419B6 = {
 			isa = PBXGroup;
 			children = (
+				C30602F61A72C94400914AFC /* QuartzCore.framework */,
+				C30602F41A72C93C00914AFC /* CoreLocation.framework */,
+				C30602F21A72C93600914AFC /* MapKit.framework */,
 				C34581881A55D66C001419B6 /* Showtime */,
 				C34581A51A55D66C001419B6 /* ShowtimeTests */,
 				C34581871A55D66C001419B6 /* Products */,
@@ -111,6 +139,8 @@
 		C34581881A55D66C001419B6 /* Showtime */ = {
 			isa = PBXGroup;
 			children = (
+				C30602EA1A72C7DB00914AFC /* WYPopoverController.h */,
+				C30602EB1A72C7DB00914AFC /* WYPopoverController.m */,
 				C34581961A55D66C001419B6 /* Main.storyboard */,
 				C345819B1A55D66C001419B6 /* LaunchScreen.xib */,
 				C31E1E681A6DB3FB00C7AB04 /* APIHelper.h */,
@@ -127,14 +157,22 @@
 				C31E1E661A6DA7B300C7AB04 /* MovieDetailViewController.m */,
 				3665EF471A714DD100173708 /* ReviewsViewController.h */,
 				3665EF481A714DD100173708 /* ReviewsViewController.m */,
-				3665EF431A714BD200173708 /* stimebg.png */,
-				3665EF451A714CE200173708 /* showtimelogo.png */,
+				C30602DC1A72BD6E00914AFC /* CinemapViewController.h */,
+				C30602DD1A72BD6E00914AFC /* CinemapViewController.m */,
+				C30602E31A72C35C00914AFC /* CinemapPopoverViewController.h */,
+				C30602E41A72C35C00914AFC /* CinemapPopoverViewController.m */,
 				C31E1E5C1A6D9F6400C7AB04 /* Movies.h */,
 				C31E1E5D1A6D9F6400C7AB04 /* Movies.m */,
 				C31E1E5F1A6D9FAA00C7AB04 /* Movie.h */,
 				C31E1E601A6D9FAA00C7AB04 /* Movie.m */,
 				C3ABD8DE1A71DE1700F57DAF /* Review.h */,
 				C3ABD8DF1A71DE1700F57DAF /* Review.m */,
+				C30602DA1A72BD6E00914AFC /* Cinema.h */,
+				C30602DB1A72BD6E00914AFC /* Cinema.m */,
+				3665EF431A714BD200173708 /* stimebg.png */,
+				3665EF451A714CE200173708 /* showtimelogo.png */,
+				C30602E81A72C3E500914AFC /* marker.png */,
+				C30602F01A72C88500914AFC /* Sheffield.gpx */,
 				C34581991A55D66C001419B6 /* Images.xcassets */,
 				C34581891A55D66C001419B6 /* Supporting Files */,
 			);
@@ -253,8 +291,10 @@
 				3665EF441A714BD200173708 /* stimebg.png in Resources */,
 				3665EF461A714CE200173708 /* showtimelogo.png in Resources */,
 				3665EF4B1A71BB7900173708 /* HarlowSolidItalic.ttf in Resources */,
+				C30602F11A72C88500914AFC /* Sheffield.gpx in Resources */,
 				C345819D1A55D66C001419B6 /* LaunchScreen.xib in Resources */,
 				C345819A1A55D66C001419B6 /* Images.xcassets in Resources */,
+				C30602E91A72C3E500914AFC /* marker.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,13 +315,17 @@
 				C31E1E671A6DA7B300C7AB04 /* MovieDetailViewController.m in Sources */,
 				C31E1E611A6D9FAA00C7AB04 /* Movie.m in Sources */,
 				C345818F1A55D66C001419B6 /* AppDelegate.m in Sources */,
+				C30602EE1A72C7DB00914AFC /* WYPopoverController.m in Sources */,
 				C31E1EAE1A6F380C00C7AB04 /* UpcomingCollectionViewController.m in Sources */,
 				C363428C1A6AC01600040B09 /* NowShowingCollectionViewController.m in Sources */,
 				C3ABD8E01A71DE1700F57DAF /* Review.m in Sources */,
 				C31E1E5E1A6D9F6400C7AB04 /* Movies.m in Sources */,
+				C30602DF1A72BD6E00914AFC /* CinemapViewController.m in Sources */,
 				C3C0E9D91A5E8FCE006EB147 /* MainViewController.m in Sources */,
+				C30602DE1A72BD6E00914AFC /* Cinema.m in Sources */,
 				C31E1E6A1A6DB3FB00C7AB04 /* APIHelper.m in Sources */,
 				3665EF491A714DD100173708 /* ReviewsViewController.m in Sources */,
+				C30602E51A72C35C00914AFC /* CinemapPopoverViewController.m in Sources */,
 				C345818C1A55D66C001419B6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
