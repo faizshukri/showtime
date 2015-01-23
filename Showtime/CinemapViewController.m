@@ -44,6 +44,8 @@
     mapView.showsUserLocation = YES;
     [mapView setRegion:region animated:YES];
     
+    MKUserTrackingBarButtonItem *buttonItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:mapView];
+    self.navigationItem.rightBarButtonItem = buttonItem;
 }
 
 - (void)didReceiveMemoryWarning {
