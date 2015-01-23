@@ -25,6 +25,12 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage:bground];
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.translucent = NO;
+    
+    _nowShowing.font = [UIFont fontWithName:@"HarlowSolidItalic.ttf" size:21];
+    _comingSoon.font = [UIFont fontWithName:@"HarlowSolidItalic.ttf" size:21];
+    _cineMap.font = [UIFont fontWithName:@"HarlowSolidItalic.ttf" size:21];
+    _myFav.font = [UIFont fontWithName:@"HarlowSolidItalic.ttf" size:21];
+
 }
 
 

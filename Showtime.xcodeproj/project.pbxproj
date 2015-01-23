@@ -10,6 +10,7 @@
 		3665EF441A714BD200173708 /* stimebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3665EF431A714BD200173708 /* stimebg.png */; };
 		3665EF461A714CE200173708 /* showtimelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3665EF451A714CE200173708 /* showtimelogo.png */; };
 		3665EF491A714DD100173708 /* ReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3665EF481A714DD100173708 /* ReviewsViewController.m */; };
+		3665EF4B1A71BB7900173708 /* HarlowSolidItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3665EF4A1A71B05B00173708 /* HarlowSolidItalic.ttf */; };
 		C31E1E5E1A6D9F6400C7AB04 /* Movies.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E5D1A6D9F6400C7AB04 /* Movies.m */; };
 		C31E1E611A6D9FAA00C7AB04 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E601A6D9FAA00C7AB04 /* Movie.m */; };
 		C31E1E671A6DA7B300C7AB04 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E661A6DA7B300C7AB04 /* MovieDetailViewController.m */; };
@@ -41,6 +42,7 @@
 		3665EF451A714CE200173708 /* showtimelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = showtimelogo.png; sourceTree = "<group>"; };
 		3665EF471A714DD100173708 /* ReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsViewController.h; sourceTree = "<group>"; };
 		3665EF481A714DD100173708 /* ReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsViewController.m; sourceTree = "<group>"; };
+		3665EF4A1A71B05B00173708 /* HarlowSolidItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HarlowSolidItalic.ttf; sourceTree = "<group>"; };
 		C31E1E5C1A6D9F6400C7AB04 /* Movies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movies.h; sourceTree = "<group>"; };
 		C31E1E5D1A6D9F6400C7AB04 /* Movies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movies.m; sourceTree = "<group>"; };
 		C31E1E5F1A6D9FAA00C7AB04 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		C34581891A55D66C001419B6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3665EF4A1A71B05B00173708 /* HarlowSolidItalic.ttf */,
 				C345818A1A55D66C001419B6 /* Info.plist */,
 				C345818B1A55D66C001419B6 /* main.m */,
 			);
@@ -249,6 +252,7 @@
 				C34581981A55D66C001419B6 /* Main.storyboard in Resources */,
 				3665EF441A714BD200173708 /* stimebg.png in Resources */,
 				3665EF461A714CE200173708 /* showtimelogo.png in Resources */,
+				3665EF4B1A71BB7900173708 /* HarlowSolidItalic.ttf in Resources */,
 				C345819D1A55D66C001419B6 /* LaunchScreen.xib in Resources */,
 				C345819A1A55D66C001419B6 /* Images.xcassets in Resources */,
 			);
@@ -407,7 +411,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "d5c79870-6ebd-420c-a2ce-2f0d4318c160";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -422,7 +426,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "d5c79870-6ebd-420c-a2ce-2f0d4318c160";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

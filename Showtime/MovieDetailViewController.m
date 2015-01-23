@@ -20,6 +20,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     
     [self.navigationController setToolbarHidden: NO];
     
@@ -27,10 +28,9 @@
     [[UIImage imageNamed:@"stimebg.png"] drawInRect:self.view.bounds];
     UIImage *bground = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
     self.view.backgroundColor = [UIColor colorWithPatternImage:bground];
     
-    // Do any additional setup after loading the view.
+    
     _movie = [APIHelper getMovieInfoById:_movie.movieId];
     _similarMovies = [[[Movies alloc] init] getSimilarMoviesByID:_movie.movieId];
     
@@ -41,7 +41,8 @@
     [_synopsisText setText:_movie.synopsis];
     [_castsText setText:[_movie.cast componentsJoinedByString:@"\n"]];
     
-   
+    [_thumb.layer setBorderColor: [[UIColor blackColor] CGColor]];
+    [_thumb.layer setBorderWidth: 3.0];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -75,10 +76,11 @@
 
 -(IBAction)shareButton:(UIBarButtonItem *)sender
 {
-    NSString *textToShare = @"Testing";
-    NSURL *myWebsite = _movie.pageURL;
+    NSString *apptext = @"Showtime! wants you to check this out! - ";
+    NSString *movieTitle = _movie.title;
+    NSURL *website = _movie.pageURL;
     
-    NSArray *objectsToShare = @[textToShare, myWebsite];
+    NSArray *objectsToShare = @[apptext, movieTitle, website];
     
     UIActivityViewController *shareType = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
     

@@ -10,6 +10,12 @@
 
 @interface MainViewController : UIViewController
 
+@property UILabel *nowShowing;
+@property UILabel *comingSoon;
+@property UILabel *cineMap;
+@property UILabel *myFav;
+
 @end
+
 
 
