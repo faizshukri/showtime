@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Movie.h"
 
 @interface ReviewsViewController : UIViewController
+
+@property Movie *movie;
 
 @end
