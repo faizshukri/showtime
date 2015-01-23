@@ -43,6 +43,10 @@
     
     [_thumb.layer setBorderColor: [[UIColor blackColor] CGColor]];
     [_thumb.layer setBorderWidth: 3.0];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEE, MMM d, yyyy"];
+    [_releaseDate setText:[dateFormatter stringFromDate:_movie.release_date]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -67,7 +71,7 @@
     [similarPanel setFrame:CGRectMake(20, lastObj.frame.origin.y+30, similarPanel.frame.size.width, imgHeight)];
     [_scrollView addSubview:similarPanel];
     
-    long contentHeight = similarPanel.frame.origin.y + similarPanel.frame.size.height + 70;
+    long contentHeight = similarPanel.frame.origin.y + similarPanel.frame.size.height + 20;
     _scrollView.contentSize = CGSizeMake(_scrollView.frame.size.width, contentHeight);
     
     

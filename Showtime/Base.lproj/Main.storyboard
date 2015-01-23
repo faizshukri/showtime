@@ -260,21 +260,37 @@
                                         <color key="textColor" red="0.003676966716" green="0.0" blue="0.47833806820000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Release at:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUR-3v-3Dx">
+                                        <rect key="frame" x="131" y="91" width="73" height="21"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sEY-Kq-R5l">
+                                        <rect key="frame" x="210" y="91" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="LQg-Bj-NZk" firstAttribute="top" secondItem="U5N-Kw-Mck" secondAttribute="bottom" constant="20" id="2c1-Ac-cnT"/>
                                     <constraint firstItem="t2y-f8-iMc" firstAttribute="top" secondItem="66f-TL-PlL" secondAttribute="top" constant="20" id="4PQ-3x-fXw"/>
                                     <constraint firstItem="65E-0y-Cps" firstAttribute="leading" secondItem="66f-TL-PlL" secondAttribute="leading" constant="20" id="5sJ-sw-9zz"/>
                                     <constraint firstItem="vxV-kq-rhu" firstAttribute="top" secondItem="t2y-f8-iMc" secondAttribute="bottom" constant="3" id="73o-B9-aHg"/>
+                                    <constraint firstItem="MUR-3v-3Dx" firstAttribute="top" secondItem="SfH-pF-PjQ" secondAttribute="bottom" constant="8" id="7Tr-vs-Adw"/>
+                                    <constraint firstItem="sEY-Kq-R5l" firstAttribute="leading" secondItem="MUR-3v-3Dx" secondAttribute="trailing" constant="6" id="FUY-cX-3HB"/>
                                     <constraint firstItem="vxV-kq-rhu" firstAttribute="leading" secondItem="FgM-5s-vJH" secondAttribute="trailing" constant="11" id="Hx9-Kv-hRE"/>
                                     <constraint firstItem="ifx-5l-i1E" firstAttribute="leading" secondItem="66f-TL-PlL" secondAttribute="leading" constant="35" id="Sfd-dQ-8iT"/>
                                     <constraint firstItem="p0u-7C-LSd" firstAttribute="top" secondItem="ifx-5l-i1E" secondAttribute="bottom" constant="8" id="VL9-iN-Awf"/>
                                     <constraint firstItem="U5N-Kw-Mck" firstAttribute="top" secondItem="65E-0y-Cps" secondAttribute="bottom" constant="8" id="d3G-3I-fuD"/>
                                     <constraint firstItem="U5N-Kw-Mck" firstAttribute="leading" secondItem="66f-TL-PlL" secondAttribute="leading" constant="35" id="dQW-2o-EUj"/>
                                     <constraint firstItem="SfH-pF-PjQ" firstAttribute="leading" secondItem="FgM-5s-vJH" secondAttribute="trailing" constant="11" id="gBP-CG-AbX"/>
+                                    <constraint firstItem="sEY-Kq-R5l" firstAttribute="top" secondItem="SfH-pF-PjQ" secondAttribute="bottom" constant="8" id="ksm-Gp-bPQ"/>
                                     <constraint firstItem="ifx-5l-i1E" firstAttribute="top" secondItem="LQg-Bj-NZk" secondAttribute="bottom" constant="8" id="kvN-4q-jaN"/>
                                     <constraint firstItem="p0u-7C-LSd" firstAttribute="leading" secondItem="66f-TL-PlL" secondAttribute="leading" constant="20" id="lTV-8F-s5s"/>
                                     <constraint firstItem="LQg-Bj-NZk" firstAttribute="leading" secondItem="66f-TL-PlL" secondAttribute="leading" constant="20" id="m1s-ov-3Db"/>
+                                    <constraint firstItem="MUR-3v-3Dx" firstAttribute="leading" secondItem="FgM-5s-vJH" secondAttribute="trailing" constant="11" id="ooG-07-ckJ"/>
                                     <constraint firstItem="FgM-5s-vJH" firstAttribute="leading" secondItem="66f-TL-PlL" secondAttribute="leading" constant="20" id="pZC-ZQ-g7L"/>
                                     <constraint firstItem="SfH-pF-PjQ" firstAttribute="top" secondItem="vxV-kq-rhu" secondAttribute="bottom" constant="25" id="ueD-H2-buA"/>
                                     <constraint firstItem="t2y-f8-iMc" firstAttribute="leading" secondItem="FgM-5s-vJH" secondAttribute="trailing" constant="11" id="wdg-Tz-9m5"/>
@@ -315,6 +331,7 @@
                         <outlet property="castsText" destination="ifx-5l-i1E" id="FaN-F8-3Zq"/>
                         <outlet property="genresLabel" destination="vxV-kq-rhu" id="iF6-wy-sgz"/>
                         <outlet property="pgAndRating" destination="SfH-pF-PjQ" id="MNT-p3-kSG"/>
+                        <outlet property="releaseDate" destination="sEY-Kq-R5l" id="EYZ-2v-Txm"/>
                         <outlet property="scrollView" destination="66f-TL-PlL" id="ska-ZS-183"/>
                         <outlet property="synopsisText" destination="U5N-Kw-Mck" id="aqC-Yv-0fg"/>
                         <outlet property="thumb" destination="FgM-5s-vJH" id="wwO-lb-bsK"/>

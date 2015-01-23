@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *synopsisText;
 @property (weak, nonatomic) IBOutlet UILabel *castsText;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *releaseDate;
 
 -(IBAction)shareButton:(id)sender;
 
