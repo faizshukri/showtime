@@ -14,6 +14,7 @@
 @property NSString *title;
 @property NSString *address;
 @property CLLocationCoordinate2D coordinate;
+@property MKPlacemark *placemark;
 @property NSURL *url;
 
 -(id)initWithMKMapItem:(MKMapItem*)mapItem;

@@ -24,14 +24,48 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [_nameLabel setText:_cinema.title];
+    
     [_addressLabel setText:_cinema.address];
+    [_addressLabel setTag:ADDRESS];
+    
     [_urlLabel setText:[_cinema.url absoluteString]];
+    [_urlLabel setTag:URL];
+    
+    // Add tap gesture for address and url to open using related application
+    NSArray *linkableLabels = @[_addressLabel, _urlLabel];
+    
+    for (UILabel* label in linkableLabels) {
+        
+        UITapGestureRecognizer *gestureLink = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openLink:)];
+        gestureLink.numberOfTouchesRequired = 1;
+        gestureLink.numberOfTapsRequired = 1;
+        
+        [label addGestureRecognizer:gestureLink];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 
+}
+
+-(void)openLink:(id)sender{
+    UIGestureRecognizer *rec = (UIGestureRecognizer *)sender;
+    
+    id hitLabel = [self.view hitTest:[rec locationInView:self.view] withEvent:UIEventTypeTouches];
+    
+    if ([hitLabel isKindOfClass:[UILabel class]]) {
+        
+        if(rec.view.tag == URL){
+           [[UIApplication sharedApplication] openURL:[NSURL URLWithString:((UILabel *)hitLabel).text]];
+        } else if(rec.view.tag == ADDRESS){
+            MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:_cinema.placemark];
+            [mapItem setName:_cinema.title];
+            [mapItem openInMapsWithLaunchOptions:nil];
+        }
+        
+    }
 }
 
 #pragma mark - Table view data source

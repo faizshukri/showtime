@@ -139,7 +139,7 @@
         <scene sceneID="tBE-nz-7fO">
             <objects>
                 <tableViewController storyboardIdentifier="cinemaPopover" autoresizesArchivedViewToFullSize="NO" wantsFullScreenLayout="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NDW-XI-G98" customClass="CinemapPopoverViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qxP-Le-Zbt">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qxP-Le-Zbt">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -164,15 +164,15 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Address" id="7gx-Ob-BF4">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="pVG-po-XbG" style="IBUITableViewCellStyleDefault" id="giL-zR-Pqj">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="vGC-E3-Ilf" style="IBUITableViewCellStyleDefault" id="giL-zR-Pqj">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="giL-zR-Pqj" id="nv2-aq-Fxd">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Cinema Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pVG-po-XbG">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Cinema Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vGC-E3-Ilf">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -182,15 +182,15 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Website" id="Gq0-2M-ttx">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Zg7-aN-Tad" style="IBUITableViewCellStyleDefault" id="ObQ-NI-FKq">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="9gc-gG-qfq" style="IBUITableViewCellStyleDefault" id="ObQ-NI-FKq">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ObQ-NI-FKq" id="eqf-HV-q2i">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Website URL" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zg7-aN-Tad">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Website URL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9gc-gG-qfq">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -207,14 +207,15 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="250"/>
                     <connections>
-                        <outlet property="addressLabel" destination="pVG-po-XbG" id="xW2-XN-7jE"/>
+                        <outlet property="addressLabel" destination="vGC-E3-Ilf" id="FF3-0p-YSp"/>
                         <outlet property="nameLabel" destination="nhJ-cl-Epj" id="6Ny-Hr-5Qg"/>
-                        <outlet property="urlLabel" destination="Zg7-aN-Tad" id="EfY-D5-Kuo"/>
+                        <outlet property="urlLabel" destination="9gc-gG-qfq" id="oQ4-Fh-w7H"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1c-p5-u9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SXp-Td-StX"/>
             </objects>
-            <point key="canvasLocation" x="-107" y="220"/>
+            <point key="canvasLocation" x="-139" y="245"/>
         </scene>
         <!--Now Showing-->
         <scene sceneID="muX-sj-V4w">

@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Cinema.h"
 
+typedef NS_ENUM(NSInteger, LinkType){
+    ADDRESS = 1,
+    URL = 2
+};
 @interface CinemapPopoverViewController : UITableViewController
 
 @property Cinema *cinema;

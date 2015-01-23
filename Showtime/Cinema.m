@@ -17,6 +17,7 @@
     if(self){
         _title = mapItem.name;
         _coordinate = mapItem.placemark.coordinate;
+        _placemark = mapItem.placemark;
         
         NSDictionary *addressDictionary = mapItem.placemark.addressDictionary;
         NSString *formattedAddress = [[addressDictionary objectForKey:@"FormattedAddressLines"] componentsJoinedByString:@", "];
