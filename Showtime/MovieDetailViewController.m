@@ -7,7 +7,7 @@
 //
 
 #import "MovieDetailViewController.h"
-#import "ReviewsViewController.h"
+#import "ReviewsTableController.h"
 #import "APIHelper.h"
 #import "Movies.h"
 
@@ -118,7 +118,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    ReviewsViewController *vc = [segue destinationViewController];
+    ReviewsTableController *vc = [segue destinationViewController];
     [vc setMovie:_movie];
 }
 
