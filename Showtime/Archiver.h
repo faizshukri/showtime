@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Movie.h"
 
 @interface Archiver : NSObject
 
 +(NSString*) archivePath;
-+(BOOL)archive:(id)movie;
-+(NSArray*)unarchive;
++(BOOL)archive:(Movie*)movie;
++(NSDictionary*)unarchive;
 
 @end
