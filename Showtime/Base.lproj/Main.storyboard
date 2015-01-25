@@ -499,7 +499,9 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Movie Detail" id="b70-eh-N8z"/>
+                    <navigationItem key="navigationItem" title="Movie Detail" id="b70-eh-N8z">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="6UX-Ed-jtH"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -517,7 +519,7 @@
             </objects>
             <point key="canvasLocation" x="1033.5" y="-794.5"/>
         </scene>
-        <!--Reviews Table Controller-->
+        <!--Reviews-->
         <scene sceneID="xXd-lR-uDa">
             <objects>
                 <tableViewController id="rly-td-ShG" customClass="ReviewsTableController" sceneMemberID="viewController">
@@ -590,6 +592,7 @@
                             <outlet property="delegate" destination="rly-td-ShG" id="tA4-Np-ANu"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Reviews" id="nth-Pw-7gC"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ywn-EA-r4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
