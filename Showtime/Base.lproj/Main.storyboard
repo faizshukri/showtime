@@ -38,24 +38,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmE-Cm-Mq2">
-                                <rect key="frame" x="106" y="351" width="162" height="30"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="106" y="351" width="162" height="40"/>
+                                <color key="backgroundColor" red="0.003676966716" green="0.0" blue="0.47833806820000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
                                 <size key="titleShadowOffset" width="2" height="0.0"/>
                                 <state key="normal" title="Coming Soon">
-                                    <color key="titleColor" red="0.003676966716236023" green="0.0" blue="0.47833806818181823" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="Sbe-nD-wvR" kind="show" id="CDe-hd-zzR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHv-tD-ec0">
-                                <rect key="frame" x="106" y="295" width="162" height="30"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="106" y="295" width="162" height="40"/>
+                                <color key="backgroundColor" red="0.003676966716" green="0.0" blue="0.47833806820000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
                                 <size key="titleShadowOffset" width="2" height="0.0"/>
                                 <state key="normal" title="Now Showing">
-                                    <color key="titleColor" red="0.003676966716236023" green="0.0" blue="0.47833806818181823" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="lkn-5M-2KW" kind="show" id="rz3-Z6-nKu"/>
@@ -65,24 +65,24 @@
                                 <rect key="frame" x="67" y="148" width="240" height="128"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhB-9c-wqU">
-                                <rect key="frame" x="106" y="478" width="162" height="31"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <rect key="frame" x="106" y="461" width="162" height="40"/>
+                                <color key="backgroundColor" red="0.003676966716" green="0.0" blue="0.47833806820000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
                                 <size key="titleShadowOffset" width="2" height="0.0"/>
                                 <state key="normal" title="My Movies">
-                                    <color key="titleColor" red="0.003676966716236023" green="0.0" blue="0.47833806818181823" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="5V9-aa-Ldy" kind="show" id="EOh-sC-5A3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bs-fg-nL7">
-                                <rect key="frame" x="106" y="411" width="162" height="30"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="106" y="406" width="162" height="40"/>
+                                <color key="backgroundColor" red="0.0078431372550000003" green="0.1058823529" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="19"/>
                                 <size key="titleShadowOffset" width="2" height="0.0"/>
                                 <state key="normal" title="CineMap">
-                                    <color key="titleColor" red="0.003676966716236023" green="0.0" blue="0.47833806818181823" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="5Ke-A6-HOs" kind="show" id="hNr-bc-cIn"/>
@@ -92,10 +92,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="8bs-fg-nL7" secondAttribute="centerX" id="0sO-RH-lSA"/>
-                            <constraint firstItem="yhB-9c-wqU" firstAttribute="top" secondItem="8bs-fg-nL7" secondAttribute="bottom" constant="27" id="FyT-3p-qkJ"/>
+                            <constraint firstItem="yhB-9c-wqU" firstAttribute="top" secondItem="8bs-fg-nL7" secondAttribute="bottom" constant="15" id="FyT-3p-qkJ"/>
                             <constraint firstItem="WmE-Cm-Mq2" firstAttribute="top" secondItem="DHv-tD-ec0" secondAttribute="bottom" constant="15" id="KA6-3E-Jfa"/>
                             <constraint firstAttribute="centerX" secondItem="WmE-Cm-Mq2" secondAttribute="centerX" id="OFv-50-5kC"/>
-                            <constraint firstItem="8bs-fg-nL7" firstAttribute="top" secondItem="WmE-Cm-Mq2" secondAttribute="bottom" constant="21" id="e9K-an-LmJ"/>
+                            <constraint firstItem="8bs-fg-nL7" firstAttribute="top" secondItem="WmE-Cm-Mq2" secondAttribute="bottom" constant="15" id="e9K-an-LmJ"/>
                             <constraint firstAttribute="centerX" secondItem="DHv-tD-ec0" secondAttribute="centerX" id="es2-m4-7CQ"/>
                             <constraint firstAttribute="centerX" secondItem="yhB-9c-wqU" secondAttribute="centerX" id="xMs-UL-CnR"/>
                         </constraints>
@@ -323,7 +323,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gi6-i8-aaR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="G4W-Vm-cn4">
                             <size key="itemSize" width="100" height="133"/>
