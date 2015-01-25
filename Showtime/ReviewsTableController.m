@@ -64,7 +64,11 @@
     ReviewsTableCell *cell = (ReviewsTableCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     cell.critwriter.text = [self.critic objectAtIndex:indexPath.row];
-    // cell.date.text = [self.reviewDate objectAtIndex:indexPath.row ];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd MMMM yyyy"];
+    
+    cell.date.text = [dateFormatter stringFromDate:[self.reviewDate objectAtIndex:indexPath.row]];
     
     cell.website.text = [self.web objectAtIndex:indexPath.row];
     
