@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RiB-oZ-GQH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -554,38 +555,41 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bbF-hh-faH" id="46M-aR-78L">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Critic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ham-sC-QfL">
-                                            <rect key="frame" x="18" y="20" width="48" height="33"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Critic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ham-sC-QfL">
+                                            <rect key="frame" x="18" y="20" width="48" height="32"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                             <color key="textColor" red="0.003676966716" green="0.0" blue="0.47833806820000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fff-b6-7ni">
-                                            <rect key="frame" x="18" y="52" width="45" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fff-b6-7ni">
+                                            <rect key="frame" x="18" y="52" width="45" height="22"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                             <color key="textColor" red="0.18879675400000001" green="0.24878996079999999" blue="0.65378393310000005" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhe-hJ-sSb">
-                                            <rect key="frame" x="18" y="75" width="31" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhe-hJ-sSb">
+                                            <rect key="frame" x="18" y="74" width="31" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="zDe-TX-eiW"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                             <color key="textColor" red="0.003676966716" green="0.0" blue="0.47833806820000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Rating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyS-fZ-aVi">
-                                            <rect key="frame" x="274" y="76" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyS-fZ-aVi">
+                                            <rect key="frame" x="274" y="76" width="42" height="20"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Rating:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCr-LP-7G9">
-                                            <rect key="frame" x="228" y="76" width="46" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCr-LP-7G9">
+                                            <rect key="frame" x="228" y="76" width="46" height="20"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                             <color key="textColor" red="0.003676966716" green="0.0" blue="0.47833806820000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Reviews" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="341" translatesAutoresizingMaskIntoConstraints="NO" id="J9S-C1-Hpo">
-                                            <rect key="frame" x="18" y="105" width="341" height="30"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reviews" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="341" translatesAutoresizingMaskIntoConstraints="NO" id="J9S-C1-Hpo">
+                                            <rect key="frame" x="18" y="104" width="341" height="31"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="Na3-LQ-c1p"/>
                                                 <constraint firstAttribute="height" constant="21" id="knS-L4-Xwe"/>
@@ -607,15 +611,19 @@
                                         <constraint firstItem="SyS-fZ-aVi" firstAttribute="leading" secondItem="pCr-LP-7G9" secondAttribute="trailing" id="1io-Q4-qg4"/>
                                         <constraint firstItem="nhe-hJ-sSb" firstAttribute="top" secondItem="fff-b6-7ni" secondAttribute="bottom" id="5wc-Q2-aQj"/>
                                         <constraint firstAttribute="trailing" secondItem="SyS-fZ-aVi" secondAttribute="trailing" constant="59" id="8nd-mF-jjx"/>
+                                        <constraint firstItem="fff-b6-7ni" firstAttribute="top" secondItem="46M-aR-78L" secondAttribute="topMargin" constant="44" id="CCh-D0-h1t"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="J9S-C1-Hpo" secondAttribute="bottom" constant="20" id="K2w-6Z-Fup"/>
                                         <constraint firstItem="J9S-C1-Hpo" firstAttribute="top" secondItem="SyS-fZ-aVi" secondAttribute="bottom" constant="8" symbolic="YES" id="Kpu-vM-OcG"/>
                                         <constraint firstItem="pCr-LP-7G9" firstAttribute="leading" secondItem="nhe-hJ-sSb" secondAttribute="trailing" constant="158" id="L1R-vU-thM"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="J9S-C1-Hpo" secondAttribute="trailing" constant="8" id="PH4-GM-HeW"/>
                                         <constraint firstItem="fff-b6-7ni" firstAttribute="top" secondItem="ham-sC-QfL" secondAttribute="bottom" id="SCy-ty-M01"/>
+                                        <constraint firstItem="nhe-hJ-sSb" firstAttribute="top" secondItem="ham-sC-QfL" secondAttribute="bottom" constant="22" id="SWM-Cw-BXC"/>
                                         <constraint firstItem="fff-b6-7ni" firstAttribute="leading" secondItem="46M-aR-78L" secondAttribute="leading" constant="18" id="TSb-o4-bxw"/>
                                         <constraint firstItem="J9S-C1-Hpo" firstAttribute="leading" secondItem="nhe-hJ-sSb" secondAttribute="leading" id="Uci-Hr-rq0"/>
+                                        <constraint firstItem="pCr-LP-7G9" firstAttribute="firstBaseline" secondItem="SyS-fZ-aVi" secondAttribute="firstBaseline" id="aU2-li-759"/>
                                         <constraint firstItem="nhe-hJ-sSb" firstAttribute="leading" secondItem="46M-aR-78L" secondAttribute="leading" constant="18" id="bTr-EV-iUK"/>
                                         <constraint firstItem="ham-sC-QfL" firstAttribute="leading" secondItem="46M-aR-78L" secondAttribute="leading" constant="18" id="dIv-Jn-XrH"/>
+                                        <constraint firstItem="pCr-LP-7G9" firstAttribute="top" secondItem="46M-aR-78L" secondAttribute="topMargin" constant="68" id="oLa-Mt-JWH"/>
                                         <constraint firstItem="J9S-C1-Hpo" firstAttribute="top" secondItem="pCr-LP-7G9" secondAttribute="bottom" constant="8" symbolic="YES" id="qYj-5j-lDh"/>
                                         <constraint firstItem="SyS-fZ-aVi" firstAttribute="leading" secondItem="pCr-LP-7G9" secondAttribute="trailing" id="s4Z-hQ-7bP"/>
                                         <constraint firstItem="ham-sC-QfL" firstAttribute="top" secondItem="46M-aR-78L" secondAttribute="top" constant="20" id="w82-FH-adY"/>
