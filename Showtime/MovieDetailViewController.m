@@ -138,7 +138,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     ReviewsTableController *vc = [segue destinationViewController];
-    [vc setMovie:_movie];
+    [vc setReviews:_movie.reviews];
 }
 
 

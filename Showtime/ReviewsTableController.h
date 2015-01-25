@@ -12,15 +12,6 @@
 
 @interface ReviewsTableController : UITableViewController
 
-@property Movie *movie;
-@property Review *review;
-
-
-@property NSArray *critic;
-@property NSArray *web;
-@property NSArray *reviewDate;
-@property NSArray *freshness;
-@property NSArray *quote;
-
+@property NSArray *reviews;
 
 @end

@@ -28,17 +28,8 @@
     UIGraphicsEndImageContext();
     self.view.backgroundColor = [UIColor colorWithPatternImage:bground];
     
-    
-    
-    NSArray *reviews = _movie.reviews;
-    
-    _critic = [reviews valueForKey:@"critic"];
-    _reviewDate = [reviews valueForKey:@"date"];
-    _freshness = [reviews valueForKey:@"freshness"];
-    _web = [reviews valueForKey:@"publication"];
-    _quote = [reviews valueForKey:@"quote"];
-    
-    
+    self.tableView.estimatedRowHeight = 200;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     // Do any additional setup after loading the view.
     
 }
@@ -54,7 +45,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return self.critic.count;
+    return _reviews.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -63,26 +54,23 @@
     
     ReviewsTableCell *cell = (ReviewsTableCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    cell.critwriter.text = [self.critic objectAtIndex:indexPath.row];
+    Review *review = [_reviews objectAtIndex:indexPath.row];
+    
+    cell.critwriter.text = review.critic;
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd MMMM yyyy"];
     
-    cell.date.text = [dateFormatter stringFromDate:[self.reviewDate objectAtIndex:indexPath.row]];
+    cell.date.text = [dateFormatter stringFromDate:review.date];
     
-    cell.website.text = [self.web objectAtIndex:indexPath.row];
+    cell.website.text = review.publication;
     
-    cell.rating.text = [self.freshness objectAtIndex:indexPath.row];
+    cell.rating.text = review.freshness;
     
-    cell.review.text = [self.quote objectAtIndex:indexPath.row];
-    cell.review.lineBreakMode = NSLineBreakByWordWrapping;
-    cell.review.numberOfLines = 0;
+    cell.review.text = review.quote;
     
     return cell;
 }
-
-
-
 
 - (void) viewWillDisappear:(BOOL)animated
 {
