@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface Movie : NSObject
+@interface Movie : NSObject <NSCoding>
 
 @property int movieId;
 @property NSString *title;
@@ -23,6 +23,7 @@
 @property NSURL *pageURL;
 @property (nonatomic) NSArray *reviews;
 
--(id) initWithData:(NSDictionary*)data;
+-(id)initWithCoder:(NSCoder *)aDecoder;
+-(id)initWithData:(NSDictionary*)data;
 
 @end

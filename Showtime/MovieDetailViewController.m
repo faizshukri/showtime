@@ -10,6 +10,7 @@
 #import "ReviewsTableController.h"
 #import "APIHelper.h"
 #import "Movies.h"
+#import "Archiver.h"
 
 @interface MovieDetailViewController ()
 
@@ -78,27 +79,41 @@
     
 }
 
--(IBAction)shareButton:(UIBarButtonItem *)sender
-{
-    NSString *apptext = @"Showtime! wants you to check this out! - ";
-    NSString *movieTitle = _movie.title;
-    NSURL *website = _movie.pageURL;
+-(IBAction)btnPressed:(UIBarButtonItem *)sender{
     
-    NSArray *objectsToShare = @[apptext, movieTitle, website];
+    if(sender.tag == FAVOURITE){
+        
+        if([Archiver archive:_movie]){
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:nil
+                                                            message:@"This movie has been add to your favourite list"
+                                                           delegate:self cancelButtonTitle:@"Okay, thanks"
+                                                  otherButtonTitles:nil];
+            
+            [alert show];
+        }
+        
+    }else if(sender.tag == SHARE){
+        NSString *apptext = @"Showtime! wants you to check this out! - ";
+        NSString *movieTitle = _movie.title;
+        NSURL *website = _movie.pageURL;
+        
+        NSArray *objectsToShare = @[apptext, movieTitle, website];
+        
+        UIActivityViewController *shareType = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+        
+        NSArray *excludeType = @[UIActivityTypeAirDrop,
+                                       UIActivityTypePrint,
+                                       UIActivityTypeAssignToContact,
+                                       UIActivityTypeSaveToCameraRoll,
+                                       UIActivityTypeAddToReadingList,
+                                       UIActivityTypePostToFlickr,
+                                       UIActivityTypePostToVimeo];
+        
+        shareType.excludedActivityTypes = excludeType;
+        
+        [self presentViewController:shareType animated:YES completion:nil];
+    }
     
-    UIActivityViewController *shareType = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
-    
-    NSArray *excludeType = @[UIActivityTypeAirDrop,
-                                   UIActivityTypePrint,
-                                   UIActivityTypeAssignToContact,
-                                   UIActivityTypeSaveToCameraRoll,
-                                   UIActivityTypeAddToReadingList,
-                                   UIActivityTypePostToFlickr,
-                                   UIActivityTypePostToVimeo];
-    
-    shareType.excludedActivityTypes = excludeType;
-    
-    [self presentViewController:shareType animated:YES completion:nil];
 }
 
 

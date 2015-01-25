@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Review : NSObject
+@interface Review : NSObject <NSCoding>
 
 -(id)initWithData:(NSDictionary*)data;
 @property NSString *critic;

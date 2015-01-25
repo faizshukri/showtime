@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Movie.h"
 
+typedef NS_ENUM(NSInteger, ButtonType){
+    FAVOURITE = 1,
+    REVIEW = 2,
+    SHARE = 3
+};
+
 @interface MovieDetailViewController : UIViewController
 
 @property Movie *movie;
@@ -24,6 +30,6 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UILabel *releaseDate;
 
--(IBAction)shareButton:(id)sender;
+-(IBAction)btnPressed:(id)sender;
 
 @end

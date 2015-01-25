@@ -13,7 +13,7 @@
 @interface APIHelper : NSObject
 
 +(NSString*)apikey;
-+(NSDictionary*)getResultByUrlString:(NSString*)urlString;
++(NSDictionary*)getJsonByUrlString:(NSString*)urlString;
 
 +(NSArray*)getShowingMoviesWithLimit:(int)limit atPage:(int)page filterLocation:(NSString*)countryCode;
 +(NSArray*)getUpcomingMoviesWithLimit:(int)limit atPage:(int)page;

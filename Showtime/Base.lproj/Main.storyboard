@@ -71,6 +71,9 @@
                                 <state key="normal" title="My Movies">
                                     <color key="titleColor" red="0.003676966716236023" green="0.0" blue="0.47833806818181823" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="5V9-aa-Ldy" kind="show" id="EOh-sC-5A3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bs-fg-nL7">
                                 <rect key="frame" x="106" y="411" width="162" height="30"/>
@@ -136,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRQ-Bi-BVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-487.5" y="262.5"/>
+            <point key="canvasLocation" x="-753.5" y="359.5"/>
         </scene>
         <!--Cinemap Popover View Controller-->
         <scene sceneID="tBE-nz-7fO">
@@ -218,7 +221,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1c-p5-u9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="SXp-Td-StX"/>
             </objects>
-            <point key="canvasLocation" x="-24" y="263"/>
+            <point key="canvasLocation" x="-754" y="885"/>
         </scene>
         <!--Now Showing-->
         <scene sceneID="muX-sj-V4w">
@@ -262,7 +265,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ML2-ng-U3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="240.5" y="-930.5"/>
+            <point key="canvasLocation" x="222.5" y="-1456.5"/>
         </scene>
         <!--Upcoming movies-->
         <scene sceneID="8bb-KO-uXj">
@@ -310,7 +313,50 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haP-mV-6cj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="240.5" y="-212.5"/>
+            <point key="canvasLocation" x="222.5" y="-729.5"/>
+        </scene>
+        <!--My movies-->
+        <scene sceneID="wlN-xY-lg7">
+            <objects>
+                <collectionViewController id="5V9-aa-Ldy" customClass="FavouriteCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gi6-i8-aaR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <inset key="scrollIndicatorInsets" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="G4W-Vm-cn4">
+                            <size key="itemSize" width="100" height="133"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="15" minY="10" maxX="15" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ThumbCell" id="Ey9-yr-HK4">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="133"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="Jiq-xN-xbp" kind="show" id="gV2-uC-ga8"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="5V9-aa-Ldy" id="cci-zp-cUO"/>
+                            <outlet property="delegate" destination="5V9-aa-Ldy" id="g7t-Se-wG1"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="My movies" id="jtB-Ea-HYv">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="qiz-aa-0dv"/>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pit-Ek-BYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="222.5" y="-0.5"/>
         </scene>
         <!--Movie Detail-->
         <scene sceneID="2oX-br-ni3">
@@ -427,18 +473,21 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <toolbarItems>
-                        <barButtonItem image="star" width="94" id="PF4-pH-noO">
-                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-2"/>
+                        <barButtonItem tag="1" image="star" width="94" id="PF4-pH-noO">
+                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-4"/>
+                            <connections>
+                                <action selector="btnPressed:" destination="Jiq-xN-xbp" id="ha7-Ld-Gce"/>
+                            </connections>
                         </barButtonItem>
-                        <barButtonItem image="review" width="174" id="yp5-ao-O4h">
-                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-2"/>
+                        <barButtonItem tag="2" image="review" width="174" id="yp5-ao-O4h">
+                            <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-4"/>
                             <connections>
                                 <segue destination="rly-td-ShG" kind="show" id="bGx-zl-T4a"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem systemItem="action" id="w8t-st-nU0">
+                        <barButtonItem tag="3" systemItem="action" id="w8t-st-nU0">
                             <connections>
-                                <action selector="shareButton:" destination="Jiq-xN-xbp" id="90l-HE-VCF"/>
+                                <action selector="btnPressed:" destination="Jiq-xN-xbp" id="vNp-PE-dDH"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -458,7 +507,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSF-WD-iZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1029.5" y="-930.5"/>
+            <point key="canvasLocation" x="1033.5" y="-794.5"/>
         </scene>
         <!--Reviews Table Controller-->
         <scene sceneID="xXd-lR-uDa">
@@ -537,7 +586,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ywn-EA-r4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1582.5" y="-940.5"/>
+            <point key="canvasLocation" x="1624.5" y="-794.5"/>
         </scene>
     </scenes>
     <resources>
@@ -546,6 +595,6 @@
         <image name="star" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QFU-Qm-9uA"/>
+        <segue reference="gV2-uC-ga8"/>
     </inferredMetricsTieBreakers>
 </document>

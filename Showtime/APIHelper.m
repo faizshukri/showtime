@@ -14,7 +14,7 @@
     return @"3hygztm99p9ermrfa2gp8dan";
 }
 
-+(NSDictionary*)getResultByUrlString:(NSString*)urlString{
++(NSDictionary*)getJsonByUrlString:(NSString*)urlString{
     // Get the json data from the url string
     NSData *jsonData = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
     if(jsonData==nil){
@@ -40,7 +40,7 @@
                            page,
                            countryCode];
     
-    NSDictionary *result = [APIHelper getResultByUrlString:urlString];
+    NSDictionary *result = [APIHelper getJsonByUrlString:urlString];
     
     int total = (int) [[result objectForKey:@"total"] intValue];
     int maxPage = (total+limit-1)/limit;
@@ -59,7 +59,7 @@
     
     NSString *urlString = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?apikey=%@&page_limit=%d&page=%d", [APIHelper apikey], limit, page];
     
-    NSDictionary *result = [APIHelper getResultByUrlString:urlString];
+    NSDictionary *result = [APIHelper getJsonByUrlString:urlString];
     
     int total = (int) [[result objectForKey:@"total"] intValue];
     int maxPage = (total+limit-1)/limit;
@@ -77,7 +77,7 @@
     
     NSString *urlString = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/movies/%d.json?apikey=%@", movieId, [APIHelper apikey]];
     
-    NSDictionary *result = [APIHelper getResultByUrlString:urlString];
+    NSDictionary *result = [APIHelper getJsonByUrlString:urlString];
     
     // Return movies array object
     return [[Movie alloc] initWithData:result];
@@ -87,7 +87,7 @@
     
     NSString *urlString = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/movies/%d/similar.json?apikey=%@&limit=3", movieId, [APIHelper apikey]];
     
-    NSDictionary *result = [APIHelper getResultByUrlString:urlString];
+    NSDictionary *result = [APIHelper getJsonByUrlString:urlString];
     // Return movies array object
     return (NSArray*)[result objectForKey:@"movies"];
 }
@@ -104,7 +104,7 @@
 +(NSArray*) getReviewOfMovie:(int)movieId {
     NSString *urlString = [NSString stringWithFormat:@"http://api.rottentomatoes.com/api/public/v1.0/movies/%d/reviews.json?apikey=%@", movieId, [APIHelper apikey]];
     
-    NSDictionary *result = [APIHelper getResultByUrlString:urlString];
+    NSDictionary *result = [APIHelper getJsonByUrlString:urlString];
     return (NSArray*)[result objectForKey:@"reviews"];
 }
 

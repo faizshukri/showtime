@@ -10,6 +10,28 @@
 
 @implementation Review
 
+-(id)initWithCoder:(NSCoder *)encoder{
+    self = [super init];
+    if(self){
+        self.critic = [encoder decodeObjectForKey:@"critic"];
+        self.date = [encoder decodeObjectForKey:@"date"];
+        self.freshness = [encoder decodeObjectForKey:@"freshness"];
+        self.publication = [encoder decodeObjectForKey:@"publication"];
+        self.quote = [encoder decodeObjectForKey:@"quote"];
+        self.link = [encoder decodeObjectForKey:@"link"];
+    }
+    return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)encoder{
+    [encoder encodeObject:self.critic forKey:@"critic"];
+    [encoder encodeObject:self.date forKey:@"date"];
+    [encoder encodeObject:self.freshness forKey:@"freshness"];
+    [encoder encodeObject:self.publication forKey:@"publication"];
+    [encoder encodeObject:self.quote forKey:@"quote"];
+    [encoder encodeObject:self.link forKey:@"link"];
+}
+
 -(id)initWithData:(NSDictionary*)data{
     self = [super init];
     
