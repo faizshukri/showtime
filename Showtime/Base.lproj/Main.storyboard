@@ -60,7 +60,7 @@
                                     <segue destination="lkn-5M-2KW" kind="show" id="rz3-Z6-nKu"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="showtimelogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="GXi-Ef-RIb">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="showtimelogo" translatesAutoresizingMaskIntoConstraints="NO" id="GXi-Ef-RIb">
                                 <rect key="frame" x="67" y="148" width="240" height="128"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhB-9c-wqU">
@@ -599,7 +599,7 @@
     </scenes>
     <resources>
         <image name="review" width="30" height="30"/>
-        <image name="showtimelogo.png" width="200" height="74"/>
+        <image name="showtimelogo" width="200" height="74"/>
         <image name="star" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>

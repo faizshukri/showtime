@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3665EF441A714BD200173708 /* stimebg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3665EF431A714BD200173708 /* stimebg.png */; };
-		3665EF461A714CE200173708 /* showtimelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3665EF451A714CE200173708 /* showtimelogo.png */; };
 		3665EF491A714DD100173708 /* ReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3665EF481A714DD100173708 /* ReviewsViewController.m */; };
 		3665EF4B1A71BB7900173708 /* HarlowSolidItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3665EF4A1A71B05B00173708 /* HarlowSolidItalic.ttf */; };
 		36B46D741A753D3F003701E1 /* ReviewsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B46D711A753D3F003701E1 /* ReviewsTableCell.m */; };
@@ -16,7 +14,6 @@
 		C30602DE1A72BD6E00914AFC /* Cinema.m in Sources */ = {isa = PBXBuildFile; fileRef = C30602DB1A72BD6E00914AFC /* Cinema.m */; };
 		C30602DF1A72BD6E00914AFC /* CinemapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C30602DD1A72BD6E00914AFC /* CinemapViewController.m */; };
 		C30602E51A72C35C00914AFC /* CinemapPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C30602E41A72C35C00914AFC /* CinemapPopoverViewController.m */; };
-		C30602E91A72C3E500914AFC /* marker.png in Resources */ = {isa = PBXBuildFile; fileRef = C30602E81A72C3E500914AFC /* marker.png */; };
 		C30602EE1A72C7DB00914AFC /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = C30602EB1A72C7DB00914AFC /* WYPopoverController.m */; };
 		C30602F11A72C88500914AFC /* Sheffield.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C30602F01A72C88500914AFC /* Sheffield.gpx */; };
 		C30602F31A72C93600914AFC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30602F21A72C93600914AFC /* MapKit.framework */; };
@@ -51,8 +48,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3665EF431A714BD200173708 /* stimebg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stimebg.png; sourceTree = "<group>"; };
-		3665EF451A714CE200173708 /* showtimelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = showtimelogo.png; sourceTree = "<group>"; };
 		3665EF471A714DD100173708 /* ReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsViewController.h; sourceTree = "<group>"; };
 		3665EF481A714DD100173708 /* ReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsViewController.m; sourceTree = "<group>"; };
 		3665EF4A1A71B05B00173708 /* HarlowSolidItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HarlowSolidItalic.ttf; sourceTree = "<group>"; };
@@ -66,7 +61,6 @@
 		C30602DD1A72BD6E00914AFC /* CinemapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinemapViewController.m; sourceTree = "<group>"; };
 		C30602E31A72C35C00914AFC /* CinemapPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinemapPopoverViewController.h; sourceTree = "<group>"; };
 		C30602E41A72C35C00914AFC /* CinemapPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CinemapPopoverViewController.m; sourceTree = "<group>"; };
-		C30602E81A72C3E500914AFC /* marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marker.png; sourceTree = "<group>"; };
 		C30602EA1A72C7DB00914AFC /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopoverController.h; sourceTree = "<group>"; };
 		C30602EB1A72C7DB00914AFC /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
 		C30602F01A72C88500914AFC /* Sheffield.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Sheffield.gpx; sourceTree = "<group>"; };
@@ -127,6 +121,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C31F17AA1A756E5D0077A4C3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C30602EA1A72C7DB00914AFC /* WYPopoverController.h */,
+				C30602EB1A72C7DB00914AFC /* WYPopoverController.m */,
+				C31E1E681A6DB3FB00C7AB04 /* APIHelper.h */,
+				C31E1E691A6DB3FB00C7AB04 /* APIHelper.m */,
+				C3DDAA8E1A73B3D2000BA2B8 /* Archiver.h */,
+				C3DDAA8F1A73B3D2000BA2B8 /* Archiver.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		C31F17AC1A756EAA0077A4C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C31E1E5C1A6D9F6400C7AB04 /* Movies.h */,
+				C31E1E5D1A6D9F6400C7AB04 /* Movies.m */,
+				C31E1E5F1A6D9FAA00C7AB04 /* Movie.h */,
+				C31E1E601A6D9FAA00C7AB04 /* Movie.m */,
+				C3ABD8DE1A71DE1700F57DAF /* Review.h */,
+				C3ABD8DF1A71DE1700F57DAF /* Review.m */,
+				C30602DA1A72BD6E00914AFC /* Cinema.h */,
+				C30602DB1A72BD6E00914AFC /* Cinema.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C31F17AD1A756EBD0077A4C3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3C0E9D71A5E8FCE006EB147 /* MainViewController.h */,
+				C3C0E9D81A5E8FCE006EB147 /* MainViewController.m */,
+				C363428A1A6AC01600040B09 /* NowShowingCollectionViewController.h */,
+				C363428B1A6AC01600040B09 /* NowShowingCollectionViewController.m */,
+				C31E1EAC1A6F380C00C7AB04 /* UpcomingCollectionViewController.h */,
+				C31E1EAD1A6F380C00C7AB04 /* UpcomingCollectionViewController.m */,
+				C31F17A71A75595D0077A4C3 /* FavouriteCollectionViewController.h */,
+				C31F17A81A75595D0077A4C3 /* FavouriteCollectionViewController.m */,
+				C31E1E651A6DA7B300C7AB04 /* MovieDetailViewController.h */,
+				C31E1E661A6DA7B300C7AB04 /* MovieDetailViewController.m */,
+				3665EF471A714DD100173708 /* ReviewsViewController.h */,
+				3665EF481A714DD100173708 /* ReviewsViewController.m */,
+				C30602DC1A72BD6E00914AFC /* CinemapViewController.h */,
+				C30602DD1A72BD6E00914AFC /* CinemapViewController.m */,
+				C30602E31A72C35C00914AFC /* CinemapPopoverViewController.h */,
+				C30602E41A72C35C00914AFC /* CinemapPopoverViewController.m */,
+				36B46D721A753D3F003701E1 /* ReviewsTableController.h */,
+				36B46D731A753D3F003701E1 /* ReviewsTableController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C31F17AE1A756F010077A4C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				36B46D701A753D3F003701E1 /* ReviewsTableCell.h */,
+				36B46D711A753D3F003701E1 /* ReviewsTableCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		C345817D1A55D66C001419B6 = {
 			isa = PBXGroup;
 			children = (
@@ -151,48 +207,14 @@
 		C34581881A55D66C001419B6 /* Showtime */ = {
 			isa = PBXGroup;
 			children = (
-				C30602EA1A72C7DB00914AFC /* WYPopoverController.h */,
-				C30602EB1A72C7DB00914AFC /* WYPopoverController.m */,
 				C34581961A55D66C001419B6 /* Main.storyboard */,
 				C345819B1A55D66C001419B6 /* LaunchScreen.xib */,
-				C31E1E681A6DB3FB00C7AB04 /* APIHelper.h */,
-				C31E1E691A6DB3FB00C7AB04 /* APIHelper.m */,
 				C345818D1A55D66C001419B6 /* AppDelegate.h */,
 				C345818E1A55D66C001419B6 /* AppDelegate.m */,
-				C3C0E9D71A5E8FCE006EB147 /* MainViewController.h */,
-				C3C0E9D81A5E8FCE006EB147 /* MainViewController.m */,
-				C363428A1A6AC01600040B09 /* NowShowingCollectionViewController.h */,
-				C363428B1A6AC01600040B09 /* NowShowingCollectionViewController.m */,
-				C31E1EAC1A6F380C00C7AB04 /* UpcomingCollectionViewController.h */,
-				C31E1EAD1A6F380C00C7AB04 /* UpcomingCollectionViewController.m */,
-				C31F17A71A75595D0077A4C3 /* FavouriteCollectionViewController.h */,
-				C31F17A81A75595D0077A4C3 /* FavouriteCollectionViewController.m */,
-				C31E1E651A6DA7B300C7AB04 /* MovieDetailViewController.h */,
-				C31E1E661A6DA7B300C7AB04 /* MovieDetailViewController.m */,
-				3665EF471A714DD100173708 /* ReviewsViewController.h */,
-				3665EF481A714DD100173708 /* ReviewsViewController.m */,
-				C30602DC1A72BD6E00914AFC /* CinemapViewController.h */,
-				C30602DD1A72BD6E00914AFC /* CinemapViewController.m */,
-				C30602E31A72C35C00914AFC /* CinemapPopoverViewController.h */,
-				C30602E41A72C35C00914AFC /* CinemapPopoverViewController.m */,
-				36B46D701A753D3F003701E1 /* ReviewsTableCell.h */,
-				36B46D711A753D3F003701E1 /* ReviewsTableCell.m */,
-				36B46D721A753D3F003701E1 /* ReviewsTableController.h */,
-				36B46D731A753D3F003701E1 /* ReviewsTableController.m */,
-				C31E1E5C1A6D9F6400C7AB04 /* Movies.h */,
-				C31E1E5D1A6D9F6400C7AB04 /* Movies.m */,
-				C31E1E5F1A6D9FAA00C7AB04 /* Movie.h */,
-				C31E1E601A6D9FAA00C7AB04 /* Movie.m */,
-				C3ABD8DE1A71DE1700F57DAF /* Review.h */,
-				C3ABD8DF1A71DE1700F57DAF /* Review.m */,
-				C30602DA1A72BD6E00914AFC /* Cinema.h */,
-				C30602DB1A72BD6E00914AFC /* Cinema.m */,
-				C3DDAA8E1A73B3D2000BA2B8 /* Archiver.h */,
-				C3DDAA8F1A73B3D2000BA2B8 /* Archiver.m */,
-				3665EF431A714BD200173708 /* stimebg.png */,
-				3665EF451A714CE200173708 /* showtimelogo.png */,
-				C30602E81A72C3E500914AFC /* marker.png */,
-				C30602F01A72C88500914AFC /* Sheffield.gpx */,
+				C31F17AC1A756EAA0077A4C3 /* Models */,
+				C31F17AE1A756F010077A4C3 /* Views */,
+				C31F17AD1A756EBD0077A4C3 /* Controllers */,
+				C31F17AA1A756E5D0077A4C3 /* Utilities */,
 				C34581991A55D66C001419B6 /* Images.xcassets */,
 				C34581891A55D66C001419B6 /* Supporting Files */,
 			);
@@ -202,6 +224,7 @@
 		C34581891A55D66C001419B6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C30602F01A72C88500914AFC /* Sheffield.gpx */,
 				3665EF4A1A71B05B00173708 /* HarlowSolidItalic.ttf */,
 				C345818A1A55D66C001419B6 /* Info.plist */,
 				C345818B1A55D66C001419B6 /* main.m */,
@@ -308,13 +331,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C34581981A55D66C001419B6 /* Main.storyboard in Resources */,
-				3665EF441A714BD200173708 /* stimebg.png in Resources */,
-				3665EF461A714CE200173708 /* showtimelogo.png in Resources */,
 				3665EF4B1A71BB7900173708 /* HarlowSolidItalic.ttf in Resources */,
 				C30602F11A72C88500914AFC /* Sheffield.gpx in Resources */,
 				C345819D1A55D66C001419B6 /* LaunchScreen.xib in Resources */,
 				C345819A1A55D66C001419B6 /* Images.xcassets in Resources */,
-				C30602E91A72C3E500914AFC /* marker.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
