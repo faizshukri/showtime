@@ -154,7 +154,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="mapView" destination="avK-uk-kSe" id="TPw-fS-wC7"/>
-                        <segue destination="NDW-XI-G98" kind="popoverPresentation" popoverAnchorView="avK-uk-kSe" id="fEP-8I-6F5">
+                        <segue destination="NDW-XI-G98" kind="popoverPresentation" identifier="popOver" popoverAnchorView="avK-uk-kSe" id="fEP-8I-6F5">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
                     </connections>
