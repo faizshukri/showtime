@@ -20,6 +20,8 @@
 		C30602F31A72C93600914AFC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30602F21A72C93600914AFC /* MapKit.framework */; };
 		C30602F51A72C93C00914AFC /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30602F41A72C93C00914AFC /* CoreLocation.framework */; };
 		C30602F71A72C94400914AFC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30602F61A72C94400914AFC /* QuartzCore.framework */; };
+		36B46D741A753D3F003701E1 /* ReviewsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B46D711A753D3F003701E1 /* ReviewsTableCell.m */; };
+		36B46D751A753D3F003701E1 /* ReviewsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B46D731A753D3F003701E1 /* ReviewsTableController.m */; };
 		C31E1E5E1A6D9F6400C7AB04 /* Movies.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E5D1A6D9F6400C7AB04 /* Movies.m */; };
 		C31E1E611A6D9FAA00C7AB04 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E601A6D9FAA00C7AB04 /* Movie.m */; };
 		C31E1E671A6DA7B300C7AB04 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E661A6DA7B300C7AB04 /* MovieDetailViewController.m */; };
@@ -65,6 +67,10 @@
 		C30602F21A72C93600914AFC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C30602F41A72C93C00914AFC /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C30602F61A72C94400914AFC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		36B46D701A753D3F003701E1 /* ReviewsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsTableCell.h; sourceTree = "<group>"; };
+		36B46D711A753D3F003701E1 /* ReviewsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsTableCell.m; sourceTree = "<group>"; };
+		36B46D721A753D3F003701E1 /* ReviewsTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsTableController.h; sourceTree = "<group>"; };
+		36B46D731A753D3F003701E1 /* ReviewsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsTableController.m; sourceTree = "<group>"; };
 		C31E1E5C1A6D9F6400C7AB04 /* Movies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movies.h; sourceTree = "<group>"; };
 		C31E1E5D1A6D9F6400C7AB04 /* Movies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movies.m; sourceTree = "<group>"; };
 		C31E1E5F1A6D9FAA00C7AB04 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
@@ -161,6 +167,12 @@
 				C30602DD1A72BD6E00914AFC /* CinemapViewController.m */,
 				C30602E31A72C35C00914AFC /* CinemapPopoverViewController.h */,
 				C30602E41A72C35C00914AFC /* CinemapPopoverViewController.m */,
+				36B46D701A753D3F003701E1 /* ReviewsTableCell.h */,
+				36B46D711A753D3F003701E1 /* ReviewsTableCell.m */,
+				36B46D721A753D3F003701E1 /* ReviewsTableController.h */,
+				36B46D731A753D3F003701E1 /* ReviewsTableController.m */,
+				3665EF431A714BD200173708 /* stimebg.png */,
+				3665EF451A714CE200173708 /* showtimelogo.png */,
 				C31E1E5C1A6D9F6400C7AB04 /* Movies.h */,
 				C31E1E5D1A6D9F6400C7AB04 /* Movies.m */,
 				C31E1E5F1A6D9FAA00C7AB04 /* Movie.h */,
@@ -314,6 +326,7 @@
 			files = (
 				C31E1E671A6DA7B300C7AB04 /* MovieDetailViewController.m in Sources */,
 				C31E1E611A6D9FAA00C7AB04 /* Movie.m in Sources */,
+				36B46D741A753D3F003701E1 /* ReviewsTableCell.m in Sources */,
 				C345818F1A55D66C001419B6 /* AppDelegate.m in Sources */,
 				C30602EE1A72C7DB00914AFC /* WYPopoverController.m in Sources */,
 				C31E1EAE1A6F380C00C7AB04 /* UpcomingCollectionViewController.m in Sources */,
@@ -324,6 +337,7 @@
 				C3C0E9D91A5E8FCE006EB147 /* MainViewController.m in Sources */,
 				C30602DE1A72BD6E00914AFC /* Cinema.m in Sources */,
 				C31E1E6A1A6DB3FB00C7AB04 /* APIHelper.m in Sources */,
+				36B46D751A753D3F003701E1 /* ReviewsTableController.m in Sources */,
 				3665EF491A714DD100173708 /* ReviewsViewController.m in Sources */,
 				C30602E51A72C35C00914AFC /* CinemapPopoverViewController.m in Sources */,
 				C345818C1A55D66C001419B6 /* main.m in Sources */,
