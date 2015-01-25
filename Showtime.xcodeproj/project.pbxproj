@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3665EF491A714DD100173708 /* ReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3665EF481A714DD100173708 /* ReviewsViewController.m */; };
 		3665EF4B1A71BB7900173708 /* HarlowSolidItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3665EF4A1A71B05B00173708 /* HarlowSolidItalic.ttf */; };
 		36B46D741A753D3F003701E1 /* ReviewsTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B46D711A753D3F003701E1 /* ReviewsTableCell.m */; };
 		36B46D751A753D3F003701E1 /* ReviewsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36B46D731A753D3F003701E1 /* ReviewsTableController.m */; };
@@ -48,8 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3665EF471A714DD100173708 /* ReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsViewController.h; sourceTree = "<group>"; };
-		3665EF481A714DD100173708 /* ReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsViewController.m; sourceTree = "<group>"; };
 		3665EF4A1A71B05B00173708 /* HarlowSolidItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HarlowSolidItalic.ttf; sourceTree = "<group>"; };
 		36B46D701A753D3F003701E1 /* ReviewsTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsTableCell.h; sourceTree = "<group>"; };
 		36B46D711A753D3F003701E1 /* ReviewsTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsTableCell.m; sourceTree = "<group>"; };
@@ -162,8 +159,6 @@
 				C31F17A81A75595D0077A4C3 /* FavouriteCollectionViewController.m */,
 				C31E1E651A6DA7B300C7AB04 /* MovieDetailViewController.h */,
 				C31E1E661A6DA7B300C7AB04 /* MovieDetailViewController.m */,
-				3665EF471A714DD100173708 /* ReviewsViewController.h */,
-				3665EF481A714DD100173708 /* ReviewsViewController.m */,
 				C30602DC1A72BD6E00914AFC /* CinemapViewController.h */,
 				C30602DD1A72BD6E00914AFC /* CinemapViewController.m */,
 				C30602E31A72C35C00914AFC /* CinemapPopoverViewController.h */,
@@ -368,7 +363,6 @@
 				C30602DE1A72BD6E00914AFC /* Cinema.m in Sources */,
 				C31E1E6A1A6DB3FB00C7AB04 /* APIHelper.m in Sources */,
 				36B46D751A753D3F003701E1 /* ReviewsTableController.m in Sources */,
-				3665EF491A714DD100173708 /* ReviewsViewController.m in Sources */,
 				C30602E51A72C35C00914AFC /* CinemapPopoverViewController.m in Sources */,
 				C345818C1A55D66C001419B6 /* main.m in Sources */,
 			);
