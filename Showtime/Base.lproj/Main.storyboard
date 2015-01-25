@@ -352,7 +352,15 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="My movies" id="jtB-Ea-HYv">
                         <barButtonItem key="backBarButtonItem" title="Back" id="qiz-aa-0dv"/>
+                        <barButtonItem key="rightBarButtonItem" title="Clear all" id="9KJ-Ex-pNN">
+                            <connections>
+                                <action selector="clearPressed:" destination="5V9-aa-Ldy" id="QhP-oi-2E7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="clear" destination="9KJ-Ex-pNN" id="5So-7p-jDh"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pit-Ek-BYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

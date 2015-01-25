@@ -114,4 +114,21 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
+- (IBAction)clearPressed:(id)sender {
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"Are you sure to delete your favourite movie list?" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    
+    [alert show];
+    
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if(buttonIndex == 1){
+        [Archiver removeAll];
+        _movies = @[];
+        [self.collectionView reloadData];
+    }
+}
+
+
 @end

@@ -15,4 +15,7 @@
 +(BOOL)archive:(Movie*)movie;
 +(NSDictionary*)unarchive;
 
++(void)removeSelection:(Movie*)movie;
++(void)removeAll;
+
 @end

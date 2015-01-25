@@ -42,4 +42,15 @@
     return movies;
 }
 
++(void)removeSelection:(Movie *)movie{
+    NSMutableDictionary *movies = [[NSMutableDictionary alloc] initWithDictionary:[Archiver unarchive]];
+    [movies removeObjectForKey:[NSString stringWithFormat:@"%d", movie.movieId]];
+    [NSKeyedArchiver archiveRootObject:movies toFile:[Archiver archivePath]];
+}
+
++(void)removeAll{
+    NSMutableDictionary *movies = [[NSMutableDictionary alloc] init];
+    [NSKeyedArchiver archiveRootObject:movies toFile:[Archiver archivePath]];
+}
+
 @end

@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FavouriteCollectionViewController : UICollectionViewController
+@interface FavouriteCollectionViewController : UICollectionViewController <UIAlertViewDelegate>
 
 @property NSArray *movies;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *clear;
+
+- (IBAction)clearPressed:(id)sender;
 
 @end
