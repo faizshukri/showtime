@@ -34,6 +34,7 @@
 		C363428C1A6AC01600040B09 /* NowShowingCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C363428B1A6AC01600040B09 /* NowShowingCollectionViewController.m */; };
 		C3ABD8E01A71DE1700F57DAF /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ABD8DF1A71DE1700F57DAF /* Review.m */; };
 		C3C0E9D91A5E8FCE006EB147 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C0E9D81A5E8FCE006EB147 /* MainViewController.m */; };
+		C3C735281A75D2CC0034C7BE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C735271A75D2CC0034C7BE /* Reachability.m */; };
 		C3DDAA901A73B3D2000BA2B8 /* Archiver.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DDAA8F1A73B3D2000BA2B8 /* Archiver.m */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,8 @@
 		C3ABD8DF1A71DE1700F57DAF /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
 		C3C0E9D71A5E8FCE006EB147 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		C3C0E9D81A5E8FCE006EB147 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		C3C735261A75D2CC0034C7BE /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		C3C735271A75D2CC0034C7BE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C3DDAA8E1A73B3D2000BA2B8 /* Archiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Archiver.h; sourceTree = "<group>"; };
 		C3DDAA8F1A73B3D2000BA2B8 /* Archiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Archiver.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +132,8 @@
 				C31E1E691A6DB3FB00C7AB04 /* APIHelper.m */,
 				C3DDAA8E1A73B3D2000BA2B8 /* Archiver.h */,
 				C3DDAA8F1A73B3D2000BA2B8 /* Archiver.m */,
+				C3C735261A75D2CC0034C7BE /* Reachability.h */,
+				C3C735271A75D2CC0034C7BE /* Reachability.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 				C363428C1A6AC01600040B09 /* NowShowingCollectionViewController.m in Sources */,
 				C3ABD8E01A71DE1700F57DAF /* Review.m in Sources */,
 				C31E1E5E1A6D9F6400C7AB04 /* Movies.m in Sources */,
+				C3C735281A75D2CC0034C7BE /* Reachability.m in Sources */,
 				C30602DF1A72BD6E00914AFC /* CinemapViewController.m in Sources */,
 				C3DDAA901A73B3D2000BA2B8 /* Archiver.m in Sources */,
 				C3C0E9D91A5E8FCE006EB147 /* MainViewController.m in Sources */,
