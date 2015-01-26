@@ -11,13 +11,15 @@
 
 @implementation Archiver
 
+// Return the path to archive object
 +(NSString *)archivePath {
     return [NSTemporaryDirectory() stringByAppendingPathComponent:@"movies.archive"];
 }
 
+// Archive a movie
 +(BOOL)archive:(Movie*)movie {
     
-    // Initialize favourite movies
+    // Initialize favourite movies. Get from existing object archive if exist
     NSMutableDictionary *movies = [[NSMutableDictionary alloc] initWithDictionary:[Archiver unarchive]];
     
     NSString *movieKey = [NSString stringWithFormat:@"%d", movie.movieId];
@@ -33,6 +35,7 @@
     return [NSKeyedArchiver archiveRootObject:movies toFile:[Archiver archivePath]];
 }
 
+// Unarchive object archive from path
 +(NSDictionary*)unarchive {
     NSDictionary *movies = [NSKeyedUnarchiver unarchiveObjectWithFile:[Archiver archivePath]];
     if(!movies){
@@ -42,12 +45,14 @@
     return movies;
 }
 
+// Remove a particular movie from archive object list
 +(void)removeSelection:(Movie *)movie{
     NSMutableDictionary *movies = [[NSMutableDictionary alloc] initWithDictionary:[Archiver unarchive]];
     [movies removeObjectForKey:[NSString stringWithFormat:@"%d", movie.movieId]];
     [NSKeyedArchiver archiveRootObject:movies toFile:[Archiver archivePath]];
 }
 
+// Remove all movies from object archive
 +(void)removeAll{
     NSMutableDictionary *movies = [[NSMutableDictionary alloc] init];
     [NSKeyedArchiver archiveRootObject:movies toFile:[Archiver archivePath]];

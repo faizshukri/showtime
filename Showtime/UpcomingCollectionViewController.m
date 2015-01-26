@@ -21,15 +21,13 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Draw background
     UIGraphicsBeginImageContext(self.view.frame.size);
     [[UIImage imageNamed:@"stimebg.png"] drawInRect:self.view.bounds];
     UIImage *bground = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:bground];
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
@@ -38,7 +36,10 @@ static NSString * const reuseIdentifier = @"Cell";
     _currentPage = 1;
     _pageLimit = 15;
     
+    // Initialize movies
     _movies = [[Movies alloc] initWithLimit:_pageLimit andPage:_currentPage movieType:MOVIE_UPCOMING];
+    
+    // Prepare NSDictionary for section structure of movies
     _movieInSection = [[NSMutableDictionary alloc] initWithDictionary:[_movies getMoviesInSections]];
 }
 
@@ -52,8 +53,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    // Prepare data to be pass onto MovieDetail Controller
     UICollectionViewCell *cell = (UICollectionViewCell*) sender;
     NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
     
@@ -73,6 +74,7 @@ static NSString * const reuseIdentifier = @"Cell";
     return [[[_movieInSection allValues] objectAtIndex:section] count];
 }
 
+// View for each cell
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ThumbCell" forIndexPath:indexPath];
     
@@ -84,6 +86,7 @@ static NSString * const reuseIdentifier = @"Cell";
     return cell;
 }
 
+// To draw text in the row header. Section title.
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     
     UICollectionReusableView *sectionHeader = [self.collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"sectionHeader" forIndexPath:indexPath];
@@ -97,48 +100,32 @@ static NSString * const reuseIdentifier = @"Cell";
     return sectionHeader;
 }
 
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
-
+// We create infinite scrolling. After finish drag, get the next movie page
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    
+    // Check if user finish drag at bottom of movies list
     if (scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.bounds.size.height)){
+        
+        // Increase current page flag
         _currentPage++;
+        
+        // Get movies list at the new page
         NSDictionary *movieSectionAtPage = [_movies getMoviesInSectionsAtPage:_currentPage];
+        
+        // For each result, we append to current movie section
         for(NSString *key in [movieSectionAtPage allKeys]){
+            
+            // If section is already exist, we put movie into that section
             if( [[_movieInSection allKeys] containsObject:key] ){
                 [(NSMutableArray*)[_movieInSection objectForKey:key] addObjectsFromArray:[movieSectionAtPage objectForKey:key]];
+                
+            // if not, we create a new section
             } else {
                 [(NSMutableDictionary*)_movieInSection setObject:[movieSectionAtPage objectForKey:key] forKey:key];
             }
         }
+        
+        // Reload the collection data
         [self.collectionView reloadData];
     }
 }

@@ -44,6 +44,7 @@
     mapView.showsUserLocation = YES;
     [mapView setRegion:region animated:YES];
     
+    // Add user location tracking button, so user can easily go to their current location
     MKUserTrackingBarButtonItem *buttonItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:mapView];
     self.navigationItem.rightBarButtonItem = buttonItem;
 }
@@ -53,6 +54,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+// Search place in the map with any keyword
 -(void)searchFor:(NSString*)text {
     
     MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
@@ -100,8 +102,10 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
+// Create custom annotation view
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
     
+    // If the annotation is for user location, we use the default one
     if ([annotation isKindOfClass:[MKUserLocation class]]) {
         return nil;
     }
@@ -124,8 +128,10 @@
     return annotationView;
 }
 
+// Create custom popover callout when annotation clicked
 -(void)mapView:(MKMapView *)MKMapView didSelectAnnotationView:(MKAnnotationView *)view {
     
+    // If the annotation is the user location, we user the default one
     if ([view.annotation isKindOfClass:[MKUserLocation class]]) {
         return;
     }
@@ -137,14 +143,16 @@
     CinemapPopoverViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"cinemaPopover"];
     [vc setCinema:cinema];
     
+    
+    // Here we use 3rd party library (WYPopoverController) to draw the popover, since UIPopoverController provided by Cocoa can only be used in iPad, and not work for iPhone.
     popoverController = [[WYPopoverController alloc] initWithContentViewController:vc];
     
     // Perform layout before drawing to correct the return contentSize
     [vc.tableView layoutIfNeeded];
     popoverController.popoverContentSize = vc.tableView.contentSize;
-    
     popoverController.delegate = self;
-    //    [popoverController presentPopoverAsDialogAnimated:YES];
+    
+    // Show the popover
     [popoverController presentPopoverFromRect:view.frame inView:view.superview permittedArrowDirections:WYPopoverArrowDirectionAny animated:YES];
 }
 

@@ -10,6 +10,7 @@
 
 @implementation Cinema
 
+// Initialize Cinema with MKMap Item
 -(id)initWithMKMapItem:(MKMapItem*)mapItem{
     
     self = [super init];

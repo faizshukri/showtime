@@ -21,6 +21,8 @@
     
     return self;
 }
+
+// Limit of movies, which page and type (Showing, Upcoming)
 -(id)initWithLimit:(int)limit andPage:(int)page movieType:(MovieType)type{
     
     self = [super init];
@@ -91,6 +93,7 @@
     return [self getMoviesInSections];
 }
 
+// Get array of similar Movie by movie ID 
 -(NSArray*)getSimilarMoviesByID:(int)movieId{
     
     NSArray *similarMovies = [APIHelper getSimilarMovieById:movieId];
