@@ -289,7 +289,7 @@
             </objects>
             <point key="canvasLocation" x="222.5" y="-1456.5"/>
         </scene>
-        <!--Upcoming movies-->
+        <!--Coming Soon-->
         <scene sceneID="8bb-KO-uXj">
             <objects>
                 <collectionViewController id="Sbe-nD-wvR" customClass="UpcomingCollectionViewController" sceneMemberID="viewController">
@@ -328,7 +328,7 @@
                             <outlet property="delegate" destination="Sbe-nD-wvR" id="NnE-UR-u77"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Upcoming movies" id="fV6-SK-uiZ">
+                    <navigationItem key="navigationItem" title="Coming Soon" id="fV6-SK-uiZ">
                         <barButtonItem key="backBarButtonItem" title="Back" id="KkS-Te-eiQ"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -337,7 +337,7 @@
             </objects>
             <point key="canvasLocation" x="222.5" y="-729.5"/>
         </scene>
-        <!--My movies-->
+        <!--My Movies-->
         <scene sceneID="wlN-xY-lg7">
             <objects>
                 <collectionViewController id="5V9-aa-Ldy" customClass="FavouriteCollectionViewController" sceneMemberID="viewController">
@@ -372,7 +372,7 @@
                             <outlet property="delegate" destination="5V9-aa-Ldy" id="g7t-Se-wG1"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="My movies" id="jtB-Ea-HYv">
+                    <navigationItem key="navigationItem" title="My Movies" id="jtB-Ea-HYv">
                         <barButtonItem key="backBarButtonItem" title="Back" id="qiz-aa-0dv"/>
                         <barButtonItem key="rightBarButtonItem" title="Clear all" id="9KJ-Ex-pNN">
                             <connections>
