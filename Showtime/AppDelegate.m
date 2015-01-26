@@ -23,7 +23,6 @@
     NetworkStatus internetStatus = [reachability currentReachabilityStatus];
     
     if(internetStatus != NotReachable){
-        NSLog(@"Has internet");
         return YES;
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"You don't have internet connection." delegate:self cancelButtonTitle:@"Close" otherButtonTitles: nil];
