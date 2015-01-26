@@ -66,19 +66,19 @@ static void PrintReachabilityFlags(SCNetworkReachabilityFlags flags, const char*
 {
 #if kShouldPrintReachabilityFlags
     
-    NSLog(@"Reachability Flag Status: %c%c %c%c%c%c%c%c%c %s\n",
-          (flags & kSCNetworkReachabilityFlagsIsWWAN)               ? 'W' : '-',
-          (flags & kSCNetworkReachabilityFlagsReachable)            ? 'R' : '-',
-          
-          (flags & kSCNetworkReachabilityFlagsTransientConnection)  ? 't' : '-',
-          (flags & kSCNetworkReachabilityFlagsConnectionRequired)   ? 'c' : '-',
-          (flags & kSCNetworkReachabilityFlagsConnectionOnTraffic)  ? 'C' : '-',
-          (flags & kSCNetworkReachabilityFlagsInterventionRequired) ? 'i' : '-',
-          (flags & kSCNetworkReachabilityFlagsConnectionOnDemand)   ? 'D' : '-',
-          (flags & kSCNetworkReachabilityFlagsIsLocalAddress)       ? 'l' : '-',
-          (flags & kSCNetworkReachabilityFlagsIsDirect)             ? 'd' : '-',
-          comment
-          );
+//    NSLog(@"Reachability Flag Status: %c%c %c%c%c%c%c%c%c %s\n",
+//          (flags & kSCNetworkReachabilityFlagsIsWWAN)               ? 'W' : '-',
+//          (flags & kSCNetworkReachabilityFlagsReachable)            ? 'R' : '-',
+//          
+//          (flags & kSCNetworkReachabilityFlagsTransientConnection)  ? 't' : '-',
+//          (flags & kSCNetworkReachabilityFlagsConnectionRequired)   ? 'c' : '-',
+//          (flags & kSCNetworkReachabilityFlagsConnectionOnTraffic)  ? 'C' : '-',
+//          (flags & kSCNetworkReachabilityFlagsInterventionRequired) ? 'i' : '-',
+//          (flags & kSCNetworkReachabilityFlagsConnectionOnDemand)   ? 'D' : '-',
+//          (flags & kSCNetworkReachabilityFlagsIsLocalAddress)       ? 'l' : '-',
+//          (flags & kSCNetworkReachabilityFlagsIsDirect)             ? 'd' : '-',
+//          comment
+//          );
 #endif
 }
 
@@ -213,7 +213,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 
 - (NetworkStatus)localWiFiStatusForFlags:(SCNetworkReachabilityFlags)flags
 {
-//    PrintReachabilityFlags(flags, "localWiFiStatusForFlags");
+    PrintReachabilityFlags(flags, "localWiFiStatusForFlags");
     NetworkStatus returnValue = NotReachable;
     
     if ((flags & kSCNetworkReachabilityFlagsReachable) && (flags & kSCNetworkReachabilityFlagsIsDirect))
@@ -227,7 +227,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 
 - (NetworkStatus)networkStatusForFlags:(SCNetworkReachabilityFlags)flags
 {
-//    PrintReachabilityFlags(flags, "networkStatusForFlags");
+    PrintReachabilityFlags(flags, "networkStatusForFlags");
     if ((flags & kSCNetworkReachabilityFlagsReachable) == 0)
     {
         // The target host is not reachable.
