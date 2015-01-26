@@ -61,8 +61,14 @@
         
         // API return cast object in array. We create the string and make is as array first.
         NSMutableArray *castTmp = [[NSMutableArray alloc] init];
+        
         for (NSDictionary *obj in (NSArray*)[data objectForKey:@"abridged_cast"]) {
-            [castTmp addObject:[NSString stringWithFormat:@"* %@ - %@", [obj objectForKey:@"name"], [[obj objectForKey:@"characters"] componentsJoinedByString:@","]]];
+            
+            // We display name and actor if exist. If not, we default to empty
+            NSString *name = [obj objectForKey:@"name"] ? [obj objectForKey:@"name"] : @"";
+            NSString *character = [obj objectForKey:@"characters"] ? [[obj objectForKey:@"characters"] componentsJoinedByString:@","] : @"";
+            
+            [castTmp addObject:[NSString stringWithFormat:@"* %@ - %@", name, character]];
         }
         _cast        = castTmp;
     
