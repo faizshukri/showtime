@@ -24,12 +24,13 @@
 		C31E1E6A1A6DB3FB00C7AB04 /* APIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1E691A6DB3FB00C7AB04 /* APIHelper.m */; };
 		C31E1EAE1A6F380C00C7AB04 /* UpcomingCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31E1EAD1A6F380C00C7AB04 /* UpcomingCollectionViewController.m */; };
 		C31F17A91A75595D0077A4C3 /* FavouriteCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C31F17A81A75595D0077A4C3 /* FavouriteCollectionViewController.m */; };
+		C31F17B21A75B0100077A4C3 /* MoviesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C31F17B11A75B0100077A4C3 /* MoviesTests.m */; };
+		C31F17B41A75B8520077A4C3 /* ApiHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C31F17B31A75B8520077A4C3 /* ApiHelperTests.m */; };
 		C345818C1A55D66C001419B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C345818B1A55D66C001419B6 /* main.m */; };
 		C345818F1A55D66C001419B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C345818E1A55D66C001419B6 /* AppDelegate.m */; };
 		C34581981A55D66C001419B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34581961A55D66C001419B6 /* Main.storyboard */; };
 		C345819A1A55D66C001419B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C34581991A55D66C001419B6 /* Images.xcassets */; };
 		C345819D1A55D66C001419B6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C345819B1A55D66C001419B6 /* LaunchScreen.xib */; };
-		C34581A91A55D66C001419B6 /* ShowtimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C34581A81A55D66C001419B6 /* ShowtimeTests.m */; };
 		C363428C1A6AC01600040B09 /* NowShowingCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C363428B1A6AC01600040B09 /* NowShowingCollectionViewController.m */; };
 		C3ABD8E01A71DE1700F57DAF /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ABD8DF1A71DE1700F57DAF /* Review.m */; };
 		C3C0E9D91A5E8FCE006EB147 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C0E9D81A5E8FCE006EB147 /* MainViewController.m */; };
@@ -76,6 +77,8 @@
 		C31E1EAD1A6F380C00C7AB04 /* UpcomingCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpcomingCollectionViewController.m; sourceTree = "<group>"; };
 		C31F17A71A75595D0077A4C3 /* FavouriteCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouriteCollectionViewController.h; sourceTree = "<group>"; };
 		C31F17A81A75595D0077A4C3 /* FavouriteCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouriteCollectionViewController.m; sourceTree = "<group>"; };
+		C31F17B11A75B0100077A4C3 /* MoviesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesTests.m; sourceTree = "<group>"; };
+		C31F17B31A75B8520077A4C3 /* ApiHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiHelperTests.m; sourceTree = "<group>"; };
 		C34581861A55D66C001419B6 /* Showtime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Showtime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C345818A1A55D66C001419B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C345818B1A55D66C001419B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,7 +89,6 @@
 		C345819C1A55D66C001419B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C34581A21A55D66C001419B6 /* ShowtimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShowtimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C34581A71A55D66C001419B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C34581A81A55D66C001419B6 /* ShowtimeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowtimeTests.m; sourceTree = "<group>"; };
 		C363428A1A6AC01600040B09 /* NowShowingCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NowShowingCollectionViewController.h; sourceTree = "<group>"; };
 		C363428B1A6AC01600040B09 /* NowShowingCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NowShowingCollectionViewController.m; sourceTree = "<group>"; };
 		C3ABD8DE1A71DE1700F57DAF /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
@@ -230,7 +232,8 @@
 		C34581A51A55D66C001419B6 /* ShowtimeTests */ = {
 			isa = PBXGroup;
 			children = (
-				C34581A81A55D66C001419B6 /* ShowtimeTests.m */,
+				C31F17B31A75B8520077A4C3 /* ApiHelperTests.m */,
+				C31F17B11A75B0100077A4C3 /* MoviesTests.m */,
 				C34581A61A55D66C001419B6 /* Supporting Files */,
 			);
 			path = ShowtimeTests;
@@ -372,7 +375,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C34581A91A55D66C001419B6 /* ShowtimeTests.m in Sources */,
+				C31F17B21A75B0100077A4C3 /* MoviesTests.m in Sources */,
+				C31F17B41A75B8520077A4C3 /* ApiHelperTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

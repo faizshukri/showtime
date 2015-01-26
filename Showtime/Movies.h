@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger, MovieType) {
     MOVIE_SHOWING,
     MOVIE_UPCOMING
-} MovieType;
+};
 
 @interface Movies : NSObject {
     int _limit;
